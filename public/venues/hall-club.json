@@ -1,0 +1,1139 @@
+{
+  "id": "hall-club",
+  "name": "Клуб · 120 мест",
+  "description": "Камерная площадка для небольших концертов",
+  "categories": [
+    {
+      "id": "table",
+      "label": "Стол",
+      "price": 100,
+      "color": "#1a1a1a"
+    },
+    {
+      "id": "standing",
+      "label": "Стоячая",
+      "price": 40,
+      "color": "#a8a8a8"
+    }
+  ],
+  "stage": {
+    "x": 0,
+    "y": 0,
+    "z": -2,
+    "width": 8,
+    "depth": 1.2
+  },
+  "sections": [
+    {
+      "id": "tables",
+      "label": "Столы",
+      "origin": {
+        "x": 0,
+        "y": 0,
+        "z": 1
+      },
+      "rotation": 0,
+      "seats": [
+        {
+          "id": "tables-r0-s0",
+          "row": 1,
+          "number": 1,
+          "category": "table",
+          "x": -3.0250000000000004,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "tables-r0-s1",
+          "row": 1,
+          "number": 2,
+          "category": "table",
+          "x": -2.475,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "tables-r0-s2",
+          "row": 1,
+          "number": 3,
+          "category": "table",
+          "x": -1.9250000000000003,
+          "z": 0,
+          "status": "sold"
+        },
+        {
+          "id": "tables-r0-s3",
+          "row": 1,
+          "number": 4,
+          "category": "table",
+          "x": -1.375,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "tables-r0-s4",
+          "row": 1,
+          "number": 5,
+          "category": "table",
+          "x": -0.8250000000000001,
+          "z": 0,
+          "status": "sold"
+        },
+        {
+          "id": "tables-r0-s5",
+          "row": 1,
+          "number": 6,
+          "category": "table",
+          "x": -0.275,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "tables-r0-s6",
+          "row": 1,
+          "number": 7,
+          "category": "table",
+          "x": 0.275,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "tables-r0-s7",
+          "row": 1,
+          "number": 8,
+          "category": "table",
+          "x": 0.8250000000000001,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "tables-r0-s8",
+          "row": 1,
+          "number": 9,
+          "category": "table",
+          "x": 1.375,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "tables-r0-s9",
+          "row": 1,
+          "number": 10,
+          "category": "table",
+          "x": 1.9250000000000003,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "tables-r0-s10",
+          "row": 1,
+          "number": 11,
+          "category": "table",
+          "x": 2.475,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "tables-r0-s11",
+          "row": 1,
+          "number": 12,
+          "category": "table",
+          "x": 3.0250000000000004,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "tables-r1-s0",
+          "row": 2,
+          "number": 1,
+          "category": "table",
+          "x": -3.0250000000000004,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "tables-r1-s1",
+          "row": 2,
+          "number": 2,
+          "category": "table",
+          "x": -2.475,
+          "z": 0.85,
+          "status": "sold"
+        },
+        {
+          "id": "tables-r1-s2",
+          "row": 2,
+          "number": 3,
+          "category": "table",
+          "x": -1.9250000000000003,
+          "z": 0.85,
+          "status": "sold"
+        },
+        {
+          "id": "tables-r1-s3",
+          "row": 2,
+          "number": 4,
+          "category": "table",
+          "x": -1.375,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "tables-r1-s4",
+          "row": 2,
+          "number": 5,
+          "category": "table",
+          "x": -0.8250000000000001,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "tables-r1-s5",
+          "row": 2,
+          "number": 6,
+          "category": "table",
+          "x": -0.275,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "tables-r1-s6",
+          "row": 2,
+          "number": 7,
+          "category": "table",
+          "x": 0.275,
+          "z": 0.85,
+          "status": "sold"
+        },
+        {
+          "id": "tables-r1-s7",
+          "row": 2,
+          "number": 8,
+          "category": "table",
+          "x": 0.8250000000000001,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "tables-r1-s8",
+          "row": 2,
+          "number": 9,
+          "category": "table",
+          "x": 1.375,
+          "z": 0.85,
+          "status": "sold"
+        },
+        {
+          "id": "tables-r1-s9",
+          "row": 2,
+          "number": 10,
+          "category": "table",
+          "x": 1.9250000000000003,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "tables-r1-s10",
+          "row": 2,
+          "number": 11,
+          "category": "table",
+          "x": 2.475,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "tables-r1-s11",
+          "row": 2,
+          "number": 12,
+          "category": "table",
+          "x": 3.0250000000000004,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "tables-r2-s0",
+          "row": 3,
+          "number": 1,
+          "category": "table",
+          "x": -3.0250000000000004,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "tables-r2-s1",
+          "row": 3,
+          "number": 2,
+          "category": "table",
+          "x": -2.475,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "tables-r2-s2",
+          "row": 3,
+          "number": 3,
+          "category": "table",
+          "x": -1.9250000000000003,
+          "z": 1.7,
+          "status": "sold"
+        },
+        {
+          "id": "tables-r2-s3",
+          "row": 3,
+          "number": 4,
+          "category": "table",
+          "x": -1.375,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "tables-r2-s4",
+          "row": 3,
+          "number": 5,
+          "category": "table",
+          "x": -0.8250000000000001,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "tables-r2-s5",
+          "row": 3,
+          "number": 6,
+          "category": "table",
+          "x": -0.275,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "tables-r2-s6",
+          "row": 3,
+          "number": 7,
+          "category": "table",
+          "x": 0.275,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "tables-r2-s7",
+          "row": 3,
+          "number": 8,
+          "category": "table",
+          "x": 0.8250000000000001,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "tables-r2-s8",
+          "row": 3,
+          "number": 9,
+          "category": "table",
+          "x": 1.375,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "tables-r2-s9",
+          "row": 3,
+          "number": 10,
+          "category": "table",
+          "x": 1.9250000000000003,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "tables-r2-s10",
+          "row": 3,
+          "number": 11,
+          "category": "table",
+          "x": 2.475,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "tables-r2-s11",
+          "row": 3,
+          "number": 12,
+          "category": "table",
+          "x": 3.0250000000000004,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "tables-r3-s0",
+          "row": 4,
+          "number": 1,
+          "category": "table",
+          "x": -3.0250000000000004,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "tables-r3-s1",
+          "row": 4,
+          "number": 2,
+          "category": "table",
+          "x": -2.475,
+          "z": 2.55,
+          "status": "sold"
+        },
+        {
+          "id": "tables-r3-s2",
+          "row": 4,
+          "number": 3,
+          "category": "table",
+          "x": -1.9250000000000003,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "tables-r3-s3",
+          "row": 4,
+          "number": 4,
+          "category": "table",
+          "x": -1.375,
+          "z": 2.55,
+          "status": "sold"
+        },
+        {
+          "id": "tables-r3-s4",
+          "row": 4,
+          "number": 5,
+          "category": "table",
+          "x": -0.8250000000000001,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "tables-r3-s5",
+          "row": 4,
+          "number": 6,
+          "category": "table",
+          "x": -0.275,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "tables-r3-s6",
+          "row": 4,
+          "number": 7,
+          "category": "table",
+          "x": 0.275,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "tables-r3-s7",
+          "row": 4,
+          "number": 8,
+          "category": "table",
+          "x": 0.8250000000000001,
+          "z": 2.55,
+          "status": "sold"
+        },
+        {
+          "id": "tables-r3-s8",
+          "row": 4,
+          "number": 9,
+          "category": "table",
+          "x": 1.375,
+          "z": 2.55,
+          "status": "sold"
+        },
+        {
+          "id": "tables-r3-s9",
+          "row": 4,
+          "number": 10,
+          "category": "table",
+          "x": 1.9250000000000003,
+          "z": 2.55,
+          "status": "sold"
+        },
+        {
+          "id": "tables-r3-s10",
+          "row": 4,
+          "number": 11,
+          "category": "table",
+          "x": 2.475,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "tables-r3-s11",
+          "row": 4,
+          "number": 12,
+          "category": "table",
+          "x": 3.0250000000000004,
+          "z": 2.55,
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": "standing",
+      "label": "Стоячая зона",
+      "origin": {
+        "x": 0,
+        "y": 0,
+        "z": 6
+      },
+      "rotation": 0,
+      "seats": [
+        {
+          "id": "standing-r0-s0",
+          "row": 1,
+          "number": 1,
+          "category": "standing",
+          "x": -3.0250000000000004,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "standing-r0-s1",
+          "row": 1,
+          "number": 2,
+          "category": "standing",
+          "x": -2.475,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "standing-r0-s2",
+          "row": 1,
+          "number": 3,
+          "category": "standing",
+          "x": -1.9250000000000003,
+          "z": 0,
+          "status": "sold"
+        },
+        {
+          "id": "standing-r0-s3",
+          "row": 1,
+          "number": 4,
+          "category": "standing",
+          "x": -1.375,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "standing-r0-s4",
+          "row": 1,
+          "number": 5,
+          "category": "standing",
+          "x": -0.8250000000000001,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "standing-r0-s5",
+          "row": 1,
+          "number": 6,
+          "category": "standing",
+          "x": -0.275,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "standing-r0-s6",
+          "row": 1,
+          "number": 7,
+          "category": "standing",
+          "x": 0.275,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "standing-r0-s7",
+          "row": 1,
+          "number": 8,
+          "category": "standing",
+          "x": 0.8250000000000001,
+          "z": 0,
+          "status": "sold"
+        },
+        {
+          "id": "standing-r0-s8",
+          "row": 1,
+          "number": 9,
+          "category": "standing",
+          "x": 1.375,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "standing-r0-s9",
+          "row": 1,
+          "number": 10,
+          "category": "standing",
+          "x": 1.9250000000000003,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "standing-r0-s10",
+          "row": 1,
+          "number": 11,
+          "category": "standing",
+          "x": 2.475,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "standing-r0-s11",
+          "row": 1,
+          "number": 12,
+          "category": "standing",
+          "x": 3.0250000000000004,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "standing-r1-s0",
+          "row": 2,
+          "number": 1,
+          "category": "standing",
+          "x": -3.0250000000000004,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "standing-r1-s1",
+          "row": 2,
+          "number": 2,
+          "category": "standing",
+          "x": -2.475,
+          "z": 0.85,
+          "status": "sold"
+        },
+        {
+          "id": "standing-r1-s2",
+          "row": 2,
+          "number": 3,
+          "category": "standing",
+          "x": -1.9250000000000003,
+          "z": 0.85,
+          "status": "sold"
+        },
+        {
+          "id": "standing-r1-s3",
+          "row": 2,
+          "number": 4,
+          "category": "standing",
+          "x": -1.375,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "standing-r1-s4",
+          "row": 2,
+          "number": 5,
+          "category": "standing",
+          "x": -0.8250000000000001,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "standing-r1-s5",
+          "row": 2,
+          "number": 6,
+          "category": "standing",
+          "x": -0.275,
+          "z": 0.85,
+          "status": "sold"
+        },
+        {
+          "id": "standing-r1-s6",
+          "row": 2,
+          "number": 7,
+          "category": "standing",
+          "x": 0.275,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "standing-r1-s7",
+          "row": 2,
+          "number": 8,
+          "category": "standing",
+          "x": 0.8250000000000001,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "standing-r1-s8",
+          "row": 2,
+          "number": 9,
+          "category": "standing",
+          "x": 1.375,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "standing-r1-s9",
+          "row": 2,
+          "number": 10,
+          "category": "standing",
+          "x": 1.9250000000000003,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "standing-r1-s10",
+          "row": 2,
+          "number": 11,
+          "category": "standing",
+          "x": 2.475,
+          "z": 0.85,
+          "status": "sold"
+        },
+        {
+          "id": "standing-r1-s11",
+          "row": 2,
+          "number": 12,
+          "category": "standing",
+          "x": 3.0250000000000004,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "standing-r2-s0",
+          "row": 3,
+          "number": 1,
+          "category": "standing",
+          "x": -3.0250000000000004,
+          "z": 1.7,
+          "status": "sold"
+        },
+        {
+          "id": "standing-r2-s1",
+          "row": 3,
+          "number": 2,
+          "category": "standing",
+          "x": -2.475,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "standing-r2-s2",
+          "row": 3,
+          "number": 3,
+          "category": "standing",
+          "x": -1.9250000000000003,
+          "z": 1.7,
+          "status": "sold"
+        },
+        {
+          "id": "standing-r2-s3",
+          "row": 3,
+          "number": 4,
+          "category": "standing",
+          "x": -1.375,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "standing-r2-s4",
+          "row": 3,
+          "number": 5,
+          "category": "standing",
+          "x": -0.8250000000000001,
+          "z": 1.7,
+          "status": "sold"
+        },
+        {
+          "id": "standing-r2-s5",
+          "row": 3,
+          "number": 6,
+          "category": "standing",
+          "x": -0.275,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "standing-r2-s6",
+          "row": 3,
+          "number": 7,
+          "category": "standing",
+          "x": 0.275,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "standing-r2-s7",
+          "row": 3,
+          "number": 8,
+          "category": "standing",
+          "x": 0.8250000000000001,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "standing-r2-s8",
+          "row": 3,
+          "number": 9,
+          "category": "standing",
+          "x": 1.375,
+          "z": 1.7,
+          "status": "sold"
+        },
+        {
+          "id": "standing-r2-s9",
+          "row": 3,
+          "number": 10,
+          "category": "standing",
+          "x": 1.9250000000000003,
+          "z": 1.7,
+          "status": "sold"
+        },
+        {
+          "id": "standing-r2-s10",
+          "row": 3,
+          "number": 11,
+          "category": "standing",
+          "x": 2.475,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "standing-r2-s11",
+          "row": 3,
+          "number": 12,
+          "category": "standing",
+          "x": 3.0250000000000004,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "standing-r3-s0",
+          "row": 4,
+          "number": 1,
+          "category": "standing",
+          "x": -3.0250000000000004,
+          "z": 2.55,
+          "status": "sold"
+        },
+        {
+          "id": "standing-r3-s1",
+          "row": 4,
+          "number": 2,
+          "category": "standing",
+          "x": -2.475,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "standing-r3-s2",
+          "row": 4,
+          "number": 3,
+          "category": "standing",
+          "x": -1.9250000000000003,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "standing-r3-s3",
+          "row": 4,
+          "number": 4,
+          "category": "standing",
+          "x": -1.375,
+          "z": 2.55,
+          "status": "sold"
+        },
+        {
+          "id": "standing-r3-s4",
+          "row": 4,
+          "number": 5,
+          "category": "standing",
+          "x": -0.8250000000000001,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "standing-r3-s5",
+          "row": 4,
+          "number": 6,
+          "category": "standing",
+          "x": -0.275,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "standing-r3-s6",
+          "row": 4,
+          "number": 7,
+          "category": "standing",
+          "x": 0.275,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "standing-r3-s7",
+          "row": 4,
+          "number": 8,
+          "category": "standing",
+          "x": 0.8250000000000001,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "standing-r3-s8",
+          "row": 4,
+          "number": 9,
+          "category": "standing",
+          "x": 1.375,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "standing-r3-s9",
+          "row": 4,
+          "number": 10,
+          "category": "standing",
+          "x": 1.9250000000000003,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "standing-r3-s10",
+          "row": 4,
+          "number": 11,
+          "category": "standing",
+          "x": 2.475,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "standing-r3-s11",
+          "row": 4,
+          "number": 12,
+          "category": "standing",
+          "x": 3.0250000000000004,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "standing-r4-s0",
+          "row": 5,
+          "number": 1,
+          "category": "standing",
+          "x": -3.0250000000000004,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "standing-r4-s1",
+          "row": 5,
+          "number": 2,
+          "category": "standing",
+          "x": -2.475,
+          "z": 3.4,
+          "status": "sold"
+        },
+        {
+          "id": "standing-r4-s2",
+          "row": 5,
+          "number": 3,
+          "category": "standing",
+          "x": -1.9250000000000003,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "standing-r4-s3",
+          "row": 5,
+          "number": 4,
+          "category": "standing",
+          "x": -1.375,
+          "z": 3.4,
+          "status": "sold"
+        },
+        {
+          "id": "standing-r4-s4",
+          "row": 5,
+          "number": 5,
+          "category": "standing",
+          "x": -0.8250000000000001,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "standing-r4-s5",
+          "row": 5,
+          "number": 6,
+          "category": "standing",
+          "x": -0.275,
+          "z": 3.4,
+          "status": "sold"
+        },
+        {
+          "id": "standing-r4-s6",
+          "row": 5,
+          "number": 7,
+          "category": "standing",
+          "x": 0.275,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "standing-r4-s7",
+          "row": 5,
+          "number": 8,
+          "category": "standing",
+          "x": 0.8250000000000001,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "standing-r4-s8",
+          "row": 5,
+          "number": 9,
+          "category": "standing",
+          "x": 1.375,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "standing-r4-s9",
+          "row": 5,
+          "number": 10,
+          "category": "standing",
+          "x": 1.9250000000000003,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "standing-r4-s10",
+          "row": 5,
+          "number": 11,
+          "category": "standing",
+          "x": 2.475,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "standing-r4-s11",
+          "row": 5,
+          "number": 12,
+          "category": "standing",
+          "x": 3.0250000000000004,
+          "z": 3.4,
+          "status": "sold"
+        },
+        {
+          "id": "standing-r5-s0",
+          "row": 6,
+          "number": 1,
+          "category": "standing",
+          "x": -3.0250000000000004,
+          "z": 4.25,
+          "status": "available"
+        },
+        {
+          "id": "standing-r5-s1",
+          "row": 6,
+          "number": 2,
+          "category": "standing",
+          "x": -2.475,
+          "z": 4.25,
+          "status": "available"
+        },
+        {
+          "id": "standing-r5-s2",
+          "row": 6,
+          "number": 3,
+          "category": "standing",
+          "x": -1.9250000000000003,
+          "z": 4.25,
+          "status": "sold"
+        },
+        {
+          "id": "standing-r5-s3",
+          "row": 6,
+          "number": 4,
+          "category": "standing",
+          "x": -1.375,
+          "z": 4.25,
+          "status": "available"
+        },
+        {
+          "id": "standing-r5-s4",
+          "row": 6,
+          "number": 5,
+          "category": "standing",
+          "x": -0.8250000000000001,
+          "z": 4.25,
+          "status": "sold"
+        },
+        {
+          "id": "standing-r5-s5",
+          "row": 6,
+          "number": 6,
+          "category": "standing",
+          "x": -0.275,
+          "z": 4.25,
+          "status": "available"
+        },
+        {
+          "id": "standing-r5-s6",
+          "row": 6,
+          "number": 7,
+          "category": "standing",
+          "x": 0.275,
+          "z": 4.25,
+          "status": "sold"
+        },
+        {
+          "id": "standing-r5-s7",
+          "row": 6,
+          "number": 8,
+          "category": "standing",
+          "x": 0.8250000000000001,
+          "z": 4.25,
+          "status": "available"
+        },
+        {
+          "id": "standing-r5-s8",
+          "row": 6,
+          "number": 9,
+          "category": "standing",
+          "x": 1.375,
+          "z": 4.25,
+          "status": "available"
+        },
+        {
+          "id": "standing-r5-s9",
+          "row": 6,
+          "number": 10,
+          "category": "standing",
+          "x": 1.9250000000000003,
+          "z": 4.25,
+          "status": "sold"
+        },
+        {
+          "id": "standing-r5-s10",
+          "row": 6,
+          "number": 11,
+          "category": "standing",
+          "x": 2.475,
+          "z": 4.25,
+          "status": "available"
+        },
+        {
+          "id": "standing-r5-s11",
+          "row": 6,
+          "number": 12,
+          "category": "standing",
+          "x": 3.0250000000000004,
+          "z": 4.25,
+          "status": "available"
+        }
+      ]
+    }
+  ],
+  "modelCalibration": {
+    "scale": 1,
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "rotY": 0
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "venues": [
+    {
+      "id": "hall-concert",
+      "name": "Концертный зал · 600 мест",
+      "description": "Классический концертный зал с партером и двумя балконами",
+      "file": "hall-concert.json",
+      "seatCount": 368
+    },
+    {
+      "id": "hall-theatre",
+      "name": "Театр · 320 мест",
+      "description": "Камерный театр с амфитеатром, без балконов",
+      "file": "hall-theatre.json",
+      "seatCount": 320
+    },
+    {
+      "id": "hall-club",
+      "name": "Клуб · 120 мест",
+      "description": "Камерная площадка для небольших концертов",
+      "file": "hall-club.json",
+      "seatCount": 120
+    }
+  ]
+}

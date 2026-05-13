@@ -1,0 +1,3389 @@
+{
+  "id": "hall-concert",
+  "name": "Концертный зал · 600 мест",
+  "description": "Классический концертный зал с партером и двумя балконами",
+  "categories": [
+    {
+      "id": "vip",
+      "label": "VIP",
+      "price": 250,
+      "color": "#1a1a1a"
+    },
+    {
+      "id": "standard",
+      "label": "Партер",
+      "price": 120,
+      "color": "#6a6a6a"
+    },
+    {
+      "id": "economy",
+      "label": "Балкон",
+      "price": 60,
+      "color": "#a8a8a8"
+    }
+  ],
+  "stage": {
+    "x": 0,
+    "y": 0,
+    "z": -2,
+    "width": 12,
+    "depth": 1.5
+  },
+  "sections": [
+    {
+      "id": "parter",
+      "label": "Партер",
+      "origin": {
+        "x": 0,
+        "y": 0,
+        "z": 2
+      },
+      "rotation": 0,
+      "seats": [
+        {
+          "id": "parter-r0-s0",
+          "row": 1,
+          "number": 1,
+          "category": "standard",
+          "x": -6.325,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "parter-r0-s1",
+          "row": 1,
+          "number": 2,
+          "category": "standard",
+          "x": -5.775,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "parter-r0-s2",
+          "row": 1,
+          "number": 3,
+          "category": "standard",
+          "x": -5.2250000000000005,
+          "z": 0,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r0-s3",
+          "row": 1,
+          "number": 4,
+          "category": "standard",
+          "x": -4.675000000000001,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "parter-r0-s4",
+          "row": 1,
+          "number": 5,
+          "category": "standard",
+          "x": -4.125,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "parter-r0-s5",
+          "row": 1,
+          "number": 6,
+          "category": "standard",
+          "x": -3.575,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "parter-r0-s6",
+          "row": 1,
+          "number": 7,
+          "category": "standard",
+          "x": -3.0250000000000004,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "parter-r0-s7",
+          "row": 1,
+          "number": 8,
+          "category": "standard",
+          "x": -2.475,
+          "z": 0,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r0-s8",
+          "row": 1,
+          "number": 9,
+          "category": "vip",
+          "x": -1.9250000000000003,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "parter-r0-s9",
+          "row": 1,
+          "number": 10,
+          "category": "vip",
+          "x": -1.375,
+          "z": 0,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r0-s10",
+          "row": 1,
+          "number": 11,
+          "category": "vip",
+          "x": -0.8250000000000001,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "parter-r0-s13",
+          "row": 1,
+          "number": 14,
+          "category": "vip",
+          "x": 0.8250000000000001,
+          "z": 0,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r0-s14",
+          "row": 1,
+          "number": 15,
+          "category": "vip",
+          "x": 1.375,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "parter-r0-s15",
+          "row": 1,
+          "number": 16,
+          "category": "vip",
+          "x": 1.9250000000000003,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "parter-r0-s16",
+          "row": 1,
+          "number": 17,
+          "category": "standard",
+          "x": 2.475,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "parter-r0-s17",
+          "row": 1,
+          "number": 18,
+          "category": "standard",
+          "x": 3.0250000000000004,
+          "z": 0,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r0-s18",
+          "row": 1,
+          "number": 19,
+          "category": "standard",
+          "x": 3.575,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "parter-r0-s19",
+          "row": 1,
+          "number": 20,
+          "category": "standard",
+          "x": 4.125,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "parter-r0-s20",
+          "row": 1,
+          "number": 21,
+          "category": "standard",
+          "x": 4.675000000000001,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "parter-r0-s21",
+          "row": 1,
+          "number": 22,
+          "category": "standard",
+          "x": 5.2250000000000005,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "parter-r0-s22",
+          "row": 1,
+          "number": 23,
+          "category": "standard",
+          "x": 5.775,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "parter-r0-s23",
+          "row": 1,
+          "number": 24,
+          "category": "standard",
+          "x": 6.325,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "parter-r1-s0",
+          "row": 2,
+          "number": 1,
+          "category": "standard",
+          "x": -6.325,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "parter-r1-s1",
+          "row": 2,
+          "number": 2,
+          "category": "standard",
+          "x": -5.775,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "parter-r1-s2",
+          "row": 2,
+          "number": 3,
+          "category": "standard",
+          "x": -5.2250000000000005,
+          "z": 0.85,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r1-s3",
+          "row": 2,
+          "number": 4,
+          "category": "standard",
+          "x": -4.675000000000001,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "parter-r1-s4",
+          "row": 2,
+          "number": 5,
+          "category": "standard",
+          "x": -4.125,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "parter-r1-s5",
+          "row": 2,
+          "number": 6,
+          "category": "standard",
+          "x": -3.575,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "parter-r1-s6",
+          "row": 2,
+          "number": 7,
+          "category": "standard",
+          "x": -3.0250000000000004,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "parter-r1-s7",
+          "row": 2,
+          "number": 8,
+          "category": "standard",
+          "x": -2.475,
+          "z": 0.85,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r1-s8",
+          "row": 2,
+          "number": 9,
+          "category": "vip",
+          "x": -1.9250000000000003,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "parter-r1-s9",
+          "row": 2,
+          "number": 10,
+          "category": "vip",
+          "x": -1.375,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "parter-r1-s10",
+          "row": 2,
+          "number": 11,
+          "category": "vip",
+          "x": -0.8250000000000001,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "parter-r1-s13",
+          "row": 2,
+          "number": 14,
+          "category": "vip",
+          "x": 0.8250000000000001,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "parter-r1-s14",
+          "row": 2,
+          "number": 15,
+          "category": "vip",
+          "x": 1.375,
+          "z": 0.85,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r1-s15",
+          "row": 2,
+          "number": 16,
+          "category": "vip",
+          "x": 1.9250000000000003,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "parter-r1-s16",
+          "row": 2,
+          "number": 17,
+          "category": "standard",
+          "x": 2.475,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "parter-r1-s17",
+          "row": 2,
+          "number": 18,
+          "category": "standard",
+          "x": 3.0250000000000004,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "parter-r1-s18",
+          "row": 2,
+          "number": 19,
+          "category": "standard",
+          "x": 3.575,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "parter-r1-s19",
+          "row": 2,
+          "number": 20,
+          "category": "standard",
+          "x": 4.125,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "parter-r1-s20",
+          "row": 2,
+          "number": 21,
+          "category": "standard",
+          "x": 4.675000000000001,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "parter-r1-s21",
+          "row": 2,
+          "number": 22,
+          "category": "standard",
+          "x": 5.2250000000000005,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "parter-r1-s22",
+          "row": 2,
+          "number": 23,
+          "category": "standard",
+          "x": 5.775,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "parter-r1-s23",
+          "row": 2,
+          "number": 24,
+          "category": "standard",
+          "x": 6.325,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "parter-r2-s0",
+          "row": 3,
+          "number": 1,
+          "category": "standard",
+          "x": -6.325,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "parter-r2-s1",
+          "row": 3,
+          "number": 2,
+          "category": "standard",
+          "x": -5.775,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "parter-r2-s2",
+          "row": 3,
+          "number": 3,
+          "category": "standard",
+          "x": -5.2250000000000005,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "parter-r2-s3",
+          "row": 3,
+          "number": 4,
+          "category": "standard",
+          "x": -4.675000000000001,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "parter-r2-s4",
+          "row": 3,
+          "number": 5,
+          "category": "standard",
+          "x": -4.125,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "parter-r2-s5",
+          "row": 3,
+          "number": 6,
+          "category": "standard",
+          "x": -3.575,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "parter-r2-s6",
+          "row": 3,
+          "number": 7,
+          "category": "standard",
+          "x": -3.0250000000000004,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "parter-r2-s7",
+          "row": 3,
+          "number": 8,
+          "category": "standard",
+          "x": -2.475,
+          "z": 1.7,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r2-s8",
+          "row": 3,
+          "number": 9,
+          "category": "vip",
+          "x": -1.9250000000000003,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "parter-r2-s9",
+          "row": 3,
+          "number": 10,
+          "category": "vip",
+          "x": -1.375,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "parter-r2-s10",
+          "row": 3,
+          "number": 11,
+          "category": "vip",
+          "x": -0.8250000000000001,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "parter-r2-s13",
+          "row": 3,
+          "number": 14,
+          "category": "vip",
+          "x": 0.8250000000000001,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "parter-r2-s14",
+          "row": 3,
+          "number": 15,
+          "category": "vip",
+          "x": 1.375,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "parter-r2-s15",
+          "row": 3,
+          "number": 16,
+          "category": "vip",
+          "x": 1.9250000000000003,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "parter-r2-s16",
+          "row": 3,
+          "number": 17,
+          "category": "standard",
+          "x": 2.475,
+          "z": 1.7,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r2-s17",
+          "row": 3,
+          "number": 18,
+          "category": "standard",
+          "x": 3.0250000000000004,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "parter-r2-s18",
+          "row": 3,
+          "number": 19,
+          "category": "standard",
+          "x": 3.575,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "parter-r2-s19",
+          "row": 3,
+          "number": 20,
+          "category": "standard",
+          "x": 4.125,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "parter-r2-s20",
+          "row": 3,
+          "number": 21,
+          "category": "standard",
+          "x": 4.675000000000001,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "parter-r2-s21",
+          "row": 3,
+          "number": 22,
+          "category": "standard",
+          "x": 5.2250000000000005,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "parter-r2-s22",
+          "row": 3,
+          "number": 23,
+          "category": "standard",
+          "x": 5.775,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "parter-r2-s23",
+          "row": 3,
+          "number": 24,
+          "category": "standard",
+          "x": 6.325,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "parter-r3-s0",
+          "row": 4,
+          "number": 1,
+          "category": "standard",
+          "x": -6.325,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "parter-r3-s1",
+          "row": 4,
+          "number": 2,
+          "category": "standard",
+          "x": -5.775,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "parter-r3-s2",
+          "row": 4,
+          "number": 3,
+          "category": "standard",
+          "x": -5.2250000000000005,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "parter-r3-s3",
+          "row": 4,
+          "number": 4,
+          "category": "standard",
+          "x": -4.675000000000001,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "parter-r3-s4",
+          "row": 4,
+          "number": 5,
+          "category": "standard",
+          "x": -4.125,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "parter-r3-s5",
+          "row": 4,
+          "number": 6,
+          "category": "standard",
+          "x": -3.575,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "parter-r3-s6",
+          "row": 4,
+          "number": 7,
+          "category": "standard",
+          "x": -3.0250000000000004,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "parter-r3-s7",
+          "row": 4,
+          "number": 8,
+          "category": "standard",
+          "x": -2.475,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "parter-r3-s8",
+          "row": 4,
+          "number": 9,
+          "category": "standard",
+          "x": -1.9250000000000003,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "parter-r3-s9",
+          "row": 4,
+          "number": 10,
+          "category": "standard",
+          "x": -1.375,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "parter-r3-s10",
+          "row": 4,
+          "number": 11,
+          "category": "standard",
+          "x": -0.8250000000000001,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "parter-r3-s13",
+          "row": 4,
+          "number": 14,
+          "category": "standard",
+          "x": 0.8250000000000001,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "parter-r3-s14",
+          "row": 4,
+          "number": 15,
+          "category": "standard",
+          "x": 1.375,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "parter-r3-s15",
+          "row": 4,
+          "number": 16,
+          "category": "standard",
+          "x": 1.9250000000000003,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "parter-r3-s16",
+          "row": 4,
+          "number": 17,
+          "category": "standard",
+          "x": 2.475,
+          "z": 2.55,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r3-s17",
+          "row": 4,
+          "number": 18,
+          "category": "standard",
+          "x": 3.0250000000000004,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "parter-r3-s18",
+          "row": 4,
+          "number": 19,
+          "category": "standard",
+          "x": 3.575,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "parter-r3-s19",
+          "row": 4,
+          "number": 20,
+          "category": "standard",
+          "x": 4.125,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "parter-r3-s20",
+          "row": 4,
+          "number": 21,
+          "category": "standard",
+          "x": 4.675000000000001,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "parter-r3-s21",
+          "row": 4,
+          "number": 22,
+          "category": "standard",
+          "x": 5.2250000000000005,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "parter-r3-s22",
+          "row": 4,
+          "number": 23,
+          "category": "standard",
+          "x": 5.775,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "parter-r3-s23",
+          "row": 4,
+          "number": 24,
+          "category": "standard",
+          "x": 6.325,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "parter-r4-s0",
+          "row": 5,
+          "number": 1,
+          "category": "standard",
+          "x": -6.325,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "parter-r4-s1",
+          "row": 5,
+          "number": 2,
+          "category": "standard",
+          "x": -5.775,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "parter-r4-s2",
+          "row": 5,
+          "number": 3,
+          "category": "standard",
+          "x": -5.2250000000000005,
+          "z": 3.4,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r4-s3",
+          "row": 5,
+          "number": 4,
+          "category": "standard",
+          "x": -4.675000000000001,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "parter-r4-s4",
+          "row": 5,
+          "number": 5,
+          "category": "standard",
+          "x": -4.125,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "parter-r4-s5",
+          "row": 5,
+          "number": 6,
+          "category": "standard",
+          "x": -3.575,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "parter-r4-s6",
+          "row": 5,
+          "number": 7,
+          "category": "standard",
+          "x": -3.0250000000000004,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "parter-r4-s7",
+          "row": 5,
+          "number": 8,
+          "category": "standard",
+          "x": -2.475,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "parter-r4-s8",
+          "row": 5,
+          "number": 9,
+          "category": "standard",
+          "x": -1.9250000000000003,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "parter-r4-s9",
+          "row": 5,
+          "number": 10,
+          "category": "standard",
+          "x": -1.375,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "parter-r4-s10",
+          "row": 5,
+          "number": 11,
+          "category": "standard",
+          "x": -0.8250000000000001,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "parter-r4-s13",
+          "row": 5,
+          "number": 14,
+          "category": "standard",
+          "x": 0.8250000000000001,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "parter-r4-s14",
+          "row": 5,
+          "number": 15,
+          "category": "standard",
+          "x": 1.375,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "parter-r4-s15",
+          "row": 5,
+          "number": 16,
+          "category": "standard",
+          "x": 1.9250000000000003,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "parter-r4-s16",
+          "row": 5,
+          "number": 17,
+          "category": "standard",
+          "x": 2.475,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "parter-r4-s17",
+          "row": 5,
+          "number": 18,
+          "category": "standard",
+          "x": 3.0250000000000004,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "parter-r4-s18",
+          "row": 5,
+          "number": 19,
+          "category": "standard",
+          "x": 3.575,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "parter-r4-s19",
+          "row": 5,
+          "number": 20,
+          "category": "standard",
+          "x": 4.125,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "parter-r4-s20",
+          "row": 5,
+          "number": 21,
+          "category": "standard",
+          "x": 4.675000000000001,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "parter-r4-s21",
+          "row": 5,
+          "number": 22,
+          "category": "standard",
+          "x": 5.2250000000000005,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "parter-r4-s22",
+          "row": 5,
+          "number": 23,
+          "category": "standard",
+          "x": 5.775,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "parter-r4-s23",
+          "row": 5,
+          "number": 24,
+          "category": "standard",
+          "x": 6.325,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "parter-r5-s0",
+          "row": 6,
+          "number": 1,
+          "category": "standard",
+          "x": -6.325,
+          "z": 4.25,
+          "status": "available"
+        },
+        {
+          "id": "parter-r5-s1",
+          "row": 6,
+          "number": 2,
+          "category": "standard",
+          "x": -5.775,
+          "z": 4.25,
+          "status": "available"
+        },
+        {
+          "id": "parter-r5-s2",
+          "row": 6,
+          "number": 3,
+          "category": "standard",
+          "x": -5.2250000000000005,
+          "z": 4.25,
+          "status": "available"
+        },
+        {
+          "id": "parter-r5-s3",
+          "row": 6,
+          "number": 4,
+          "category": "standard",
+          "x": -4.675000000000001,
+          "z": 4.25,
+          "status": "available"
+        },
+        {
+          "id": "parter-r5-s4",
+          "row": 6,
+          "number": 5,
+          "category": "standard",
+          "x": -4.125,
+          "z": 4.25,
+          "status": "available"
+        },
+        {
+          "id": "parter-r5-s5",
+          "row": 6,
+          "number": 6,
+          "category": "standard",
+          "x": -3.575,
+          "z": 4.25,
+          "status": "available"
+        },
+        {
+          "id": "parter-r5-s6",
+          "row": 6,
+          "number": 7,
+          "category": "standard",
+          "x": -3.0250000000000004,
+          "z": 4.25,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r5-s7",
+          "row": 6,
+          "number": 8,
+          "category": "standard",
+          "x": -2.475,
+          "z": 4.25,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r5-s8",
+          "row": 6,
+          "number": 9,
+          "category": "standard",
+          "x": -1.9250000000000003,
+          "z": 4.25,
+          "status": "available"
+        },
+        {
+          "id": "parter-r5-s9",
+          "row": 6,
+          "number": 10,
+          "category": "standard",
+          "x": -1.375,
+          "z": 4.25,
+          "status": "available"
+        },
+        {
+          "id": "parter-r5-s10",
+          "row": 6,
+          "number": 11,
+          "category": "standard",
+          "x": -0.8250000000000001,
+          "z": 4.25,
+          "status": "available"
+        },
+        {
+          "id": "parter-r5-s13",
+          "row": 6,
+          "number": 14,
+          "category": "standard",
+          "x": 0.8250000000000001,
+          "z": 4.25,
+          "status": "available"
+        },
+        {
+          "id": "parter-r5-s14",
+          "row": 6,
+          "number": 15,
+          "category": "standard",
+          "x": 1.375,
+          "z": 4.25,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r5-s15",
+          "row": 6,
+          "number": 16,
+          "category": "standard",
+          "x": 1.9250000000000003,
+          "z": 4.25,
+          "status": "available"
+        },
+        {
+          "id": "parter-r5-s16",
+          "row": 6,
+          "number": 17,
+          "category": "standard",
+          "x": 2.475,
+          "z": 4.25,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r5-s17",
+          "row": 6,
+          "number": 18,
+          "category": "standard",
+          "x": 3.0250000000000004,
+          "z": 4.25,
+          "status": "available"
+        },
+        {
+          "id": "parter-r5-s18",
+          "row": 6,
+          "number": 19,
+          "category": "standard",
+          "x": 3.575,
+          "z": 4.25,
+          "status": "available"
+        },
+        {
+          "id": "parter-r5-s19",
+          "row": 6,
+          "number": 20,
+          "category": "standard",
+          "x": 4.125,
+          "z": 4.25,
+          "status": "available"
+        },
+        {
+          "id": "parter-r5-s20",
+          "row": 6,
+          "number": 21,
+          "category": "standard",
+          "x": 4.675000000000001,
+          "z": 4.25,
+          "status": "available"
+        },
+        {
+          "id": "parter-r5-s21",
+          "row": 6,
+          "number": 22,
+          "category": "standard",
+          "x": 5.2250000000000005,
+          "z": 4.25,
+          "status": "available"
+        },
+        {
+          "id": "parter-r5-s22",
+          "row": 6,
+          "number": 23,
+          "category": "standard",
+          "x": 5.775,
+          "z": 4.25,
+          "status": "available"
+        },
+        {
+          "id": "parter-r5-s23",
+          "row": 6,
+          "number": 24,
+          "category": "standard",
+          "x": 6.325,
+          "z": 4.25,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r6-s0",
+          "row": 7,
+          "number": 1,
+          "category": "standard",
+          "x": -6.325,
+          "z": 5.1,
+          "status": "available"
+        },
+        {
+          "id": "parter-r6-s1",
+          "row": 7,
+          "number": 2,
+          "category": "standard",
+          "x": -5.775,
+          "z": 5.1,
+          "status": "available"
+        },
+        {
+          "id": "parter-r6-s2",
+          "row": 7,
+          "number": 3,
+          "category": "standard",
+          "x": -5.2250000000000005,
+          "z": 5.1,
+          "status": "available"
+        },
+        {
+          "id": "parter-r6-s3",
+          "row": 7,
+          "number": 4,
+          "category": "standard",
+          "x": -4.675000000000001,
+          "z": 5.1,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r6-s4",
+          "row": 7,
+          "number": 5,
+          "category": "standard",
+          "x": -4.125,
+          "z": 5.1,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r6-s5",
+          "row": 7,
+          "number": 6,
+          "category": "standard",
+          "x": -3.575,
+          "z": 5.1,
+          "status": "available"
+        },
+        {
+          "id": "parter-r6-s6",
+          "row": 7,
+          "number": 7,
+          "category": "standard",
+          "x": -3.0250000000000004,
+          "z": 5.1,
+          "status": "available"
+        },
+        {
+          "id": "parter-r6-s7",
+          "row": 7,
+          "number": 8,
+          "category": "standard",
+          "x": -2.475,
+          "z": 5.1,
+          "status": "available"
+        },
+        {
+          "id": "parter-r6-s8",
+          "row": 7,
+          "number": 9,
+          "category": "standard",
+          "x": -1.9250000000000003,
+          "z": 5.1,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r6-s9",
+          "row": 7,
+          "number": 10,
+          "category": "standard",
+          "x": -1.375,
+          "z": 5.1,
+          "status": "available"
+        },
+        {
+          "id": "parter-r6-s10",
+          "row": 7,
+          "number": 11,
+          "category": "standard",
+          "x": -0.8250000000000001,
+          "z": 5.1,
+          "status": "available"
+        },
+        {
+          "id": "parter-r6-s13",
+          "row": 7,
+          "number": 14,
+          "category": "standard",
+          "x": 0.8250000000000001,
+          "z": 5.1,
+          "status": "available"
+        },
+        {
+          "id": "parter-r6-s14",
+          "row": 7,
+          "number": 15,
+          "category": "standard",
+          "x": 1.375,
+          "z": 5.1,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r6-s15",
+          "row": 7,
+          "number": 16,
+          "category": "standard",
+          "x": 1.9250000000000003,
+          "z": 5.1,
+          "status": "available"
+        },
+        {
+          "id": "parter-r6-s16",
+          "row": 7,
+          "number": 17,
+          "category": "standard",
+          "x": 2.475,
+          "z": 5.1,
+          "status": "available"
+        },
+        {
+          "id": "parter-r6-s17",
+          "row": 7,
+          "number": 18,
+          "category": "standard",
+          "x": 3.0250000000000004,
+          "z": 5.1,
+          "status": "available"
+        },
+        {
+          "id": "parter-r6-s18",
+          "row": 7,
+          "number": 19,
+          "category": "standard",
+          "x": 3.575,
+          "z": 5.1,
+          "status": "available"
+        },
+        {
+          "id": "parter-r6-s19",
+          "row": 7,
+          "number": 20,
+          "category": "standard",
+          "x": 4.125,
+          "z": 5.1,
+          "status": "available"
+        },
+        {
+          "id": "parter-r6-s20",
+          "row": 7,
+          "number": 21,
+          "category": "standard",
+          "x": 4.675000000000001,
+          "z": 5.1,
+          "status": "available"
+        },
+        {
+          "id": "parter-r6-s21",
+          "row": 7,
+          "number": 22,
+          "category": "standard",
+          "x": 5.2250000000000005,
+          "z": 5.1,
+          "status": "available"
+        },
+        {
+          "id": "parter-r6-s22",
+          "row": 7,
+          "number": 23,
+          "category": "standard",
+          "x": 5.775,
+          "z": 5.1,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r6-s23",
+          "row": 7,
+          "number": 24,
+          "category": "standard",
+          "x": 6.325,
+          "z": 5.1,
+          "status": "available"
+        },
+        {
+          "id": "parter-r7-s0",
+          "row": 8,
+          "number": 1,
+          "category": "standard",
+          "x": -6.325,
+          "z": 5.95,
+          "status": "available"
+        },
+        {
+          "id": "parter-r7-s1",
+          "row": 8,
+          "number": 2,
+          "category": "standard",
+          "x": -5.775,
+          "z": 5.95,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r7-s2",
+          "row": 8,
+          "number": 3,
+          "category": "standard",
+          "x": -5.2250000000000005,
+          "z": 5.95,
+          "status": "available"
+        },
+        {
+          "id": "parter-r7-s3",
+          "row": 8,
+          "number": 4,
+          "category": "standard",
+          "x": -4.675000000000001,
+          "z": 5.95,
+          "status": "available"
+        },
+        {
+          "id": "parter-r7-s4",
+          "row": 8,
+          "number": 5,
+          "category": "standard",
+          "x": -4.125,
+          "z": 5.95,
+          "status": "available"
+        },
+        {
+          "id": "parter-r7-s5",
+          "row": 8,
+          "number": 6,
+          "category": "standard",
+          "x": -3.575,
+          "z": 5.95,
+          "status": "available"
+        },
+        {
+          "id": "parter-r7-s6",
+          "row": 8,
+          "number": 7,
+          "category": "standard",
+          "x": -3.0250000000000004,
+          "z": 5.95,
+          "status": "available"
+        },
+        {
+          "id": "parter-r7-s7",
+          "row": 8,
+          "number": 8,
+          "category": "standard",
+          "x": -2.475,
+          "z": 5.95,
+          "status": "available"
+        },
+        {
+          "id": "parter-r7-s8",
+          "row": 8,
+          "number": 9,
+          "category": "standard",
+          "x": -1.9250000000000003,
+          "z": 5.95,
+          "status": "available"
+        },
+        {
+          "id": "parter-r7-s9",
+          "row": 8,
+          "number": 10,
+          "category": "standard",
+          "x": -1.375,
+          "z": 5.95,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r7-s10",
+          "row": 8,
+          "number": 11,
+          "category": "standard",
+          "x": -0.8250000000000001,
+          "z": 5.95,
+          "status": "available"
+        },
+        {
+          "id": "parter-r7-s13",
+          "row": 8,
+          "number": 14,
+          "category": "standard",
+          "x": 0.8250000000000001,
+          "z": 5.95,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r7-s14",
+          "row": 8,
+          "number": 15,
+          "category": "standard",
+          "x": 1.375,
+          "z": 5.95,
+          "status": "available"
+        },
+        {
+          "id": "parter-r7-s15",
+          "row": 8,
+          "number": 16,
+          "category": "standard",
+          "x": 1.9250000000000003,
+          "z": 5.95,
+          "status": "available"
+        },
+        {
+          "id": "parter-r7-s16",
+          "row": 8,
+          "number": 17,
+          "category": "standard",
+          "x": 2.475,
+          "z": 5.95,
+          "status": "available"
+        },
+        {
+          "id": "parter-r7-s17",
+          "row": 8,
+          "number": 18,
+          "category": "standard",
+          "x": 3.0250000000000004,
+          "z": 5.95,
+          "status": "available"
+        },
+        {
+          "id": "parter-r7-s18",
+          "row": 8,
+          "number": 19,
+          "category": "standard",
+          "x": 3.575,
+          "z": 5.95,
+          "status": "available"
+        },
+        {
+          "id": "parter-r7-s19",
+          "row": 8,
+          "number": 20,
+          "category": "standard",
+          "x": 4.125,
+          "z": 5.95,
+          "status": "available"
+        },
+        {
+          "id": "parter-r7-s20",
+          "row": 8,
+          "number": 21,
+          "category": "standard",
+          "x": 4.675000000000001,
+          "z": 5.95,
+          "status": "available"
+        },
+        {
+          "id": "parter-r7-s21",
+          "row": 8,
+          "number": 22,
+          "category": "standard",
+          "x": 5.2250000000000005,
+          "z": 5.95,
+          "status": "available"
+        },
+        {
+          "id": "parter-r7-s22",
+          "row": 8,
+          "number": 23,
+          "category": "standard",
+          "x": 5.775,
+          "z": 5.95,
+          "status": "available"
+        },
+        {
+          "id": "parter-r7-s23",
+          "row": 8,
+          "number": 24,
+          "category": "standard",
+          "x": 6.325,
+          "z": 5.95,
+          "status": "available"
+        },
+        {
+          "id": "parter-r8-s0",
+          "row": 9,
+          "number": 1,
+          "category": "standard",
+          "x": -6.325,
+          "z": 6.8,
+          "status": "available"
+        },
+        {
+          "id": "parter-r8-s1",
+          "row": 9,
+          "number": 2,
+          "category": "standard",
+          "x": -5.775,
+          "z": 6.8,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r8-s2",
+          "row": 9,
+          "number": 3,
+          "category": "standard",
+          "x": -5.2250000000000005,
+          "z": 6.8,
+          "status": "available"
+        },
+        {
+          "id": "parter-r8-s3",
+          "row": 9,
+          "number": 4,
+          "category": "standard",
+          "x": -4.675000000000001,
+          "z": 6.8,
+          "status": "available"
+        },
+        {
+          "id": "parter-r8-s4",
+          "row": 9,
+          "number": 5,
+          "category": "standard",
+          "x": -4.125,
+          "z": 6.8,
+          "status": "available"
+        },
+        {
+          "id": "parter-r8-s5",
+          "row": 9,
+          "number": 6,
+          "category": "standard",
+          "x": -3.575,
+          "z": 6.8,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r8-s6",
+          "row": 9,
+          "number": 7,
+          "category": "standard",
+          "x": -3.0250000000000004,
+          "z": 6.8,
+          "status": "available"
+        },
+        {
+          "id": "parter-r8-s7",
+          "row": 9,
+          "number": 8,
+          "category": "standard",
+          "x": -2.475,
+          "z": 6.8,
+          "status": "available"
+        },
+        {
+          "id": "parter-r8-s8",
+          "row": 9,
+          "number": 9,
+          "category": "standard",
+          "x": -1.9250000000000003,
+          "z": 6.8,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r8-s9",
+          "row": 9,
+          "number": 10,
+          "category": "standard",
+          "x": -1.375,
+          "z": 6.8,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r8-s10",
+          "row": 9,
+          "number": 11,
+          "category": "standard",
+          "x": -0.8250000000000001,
+          "z": 6.8,
+          "status": "available"
+        },
+        {
+          "id": "parter-r8-s13",
+          "row": 9,
+          "number": 14,
+          "category": "standard",
+          "x": 0.8250000000000001,
+          "z": 6.8,
+          "status": "available"
+        },
+        {
+          "id": "parter-r8-s14",
+          "row": 9,
+          "number": 15,
+          "category": "standard",
+          "x": 1.375,
+          "z": 6.8,
+          "status": "available"
+        },
+        {
+          "id": "parter-r8-s15",
+          "row": 9,
+          "number": 16,
+          "category": "standard",
+          "x": 1.9250000000000003,
+          "z": 6.8,
+          "status": "available"
+        },
+        {
+          "id": "parter-r8-s16",
+          "row": 9,
+          "number": 17,
+          "category": "standard",
+          "x": 2.475,
+          "z": 6.8,
+          "status": "available"
+        },
+        {
+          "id": "parter-r8-s17",
+          "row": 9,
+          "number": 18,
+          "category": "standard",
+          "x": 3.0250000000000004,
+          "z": 6.8,
+          "status": "available"
+        },
+        {
+          "id": "parter-r8-s18",
+          "row": 9,
+          "number": 19,
+          "category": "standard",
+          "x": 3.575,
+          "z": 6.8,
+          "status": "available"
+        },
+        {
+          "id": "parter-r8-s19",
+          "row": 9,
+          "number": 20,
+          "category": "standard",
+          "x": 4.125,
+          "z": 6.8,
+          "status": "available"
+        },
+        {
+          "id": "parter-r8-s20",
+          "row": 9,
+          "number": 21,
+          "category": "standard",
+          "x": 4.675000000000001,
+          "z": 6.8,
+          "status": "available"
+        },
+        {
+          "id": "parter-r8-s21",
+          "row": 9,
+          "number": 22,
+          "category": "standard",
+          "x": 5.2250000000000005,
+          "z": 6.8,
+          "status": "available"
+        },
+        {
+          "id": "parter-r8-s22",
+          "row": 9,
+          "number": 23,
+          "category": "standard",
+          "x": 5.775,
+          "z": 6.8,
+          "status": "available"
+        },
+        {
+          "id": "parter-r8-s23",
+          "row": 9,
+          "number": 24,
+          "category": "standard",
+          "x": 6.325,
+          "z": 6.8,
+          "status": "available"
+        },
+        {
+          "id": "parter-r9-s0",
+          "row": 10,
+          "number": 1,
+          "category": "standard",
+          "x": -6.325,
+          "z": 7.6499999999999995,
+          "status": "available"
+        },
+        {
+          "id": "parter-r9-s1",
+          "row": 10,
+          "number": 2,
+          "category": "standard",
+          "x": -5.775,
+          "z": 7.6499999999999995,
+          "status": "available"
+        },
+        {
+          "id": "parter-r9-s2",
+          "row": 10,
+          "number": 3,
+          "category": "standard",
+          "x": -5.2250000000000005,
+          "z": 7.6499999999999995,
+          "status": "available"
+        },
+        {
+          "id": "parter-r9-s3",
+          "row": 10,
+          "number": 4,
+          "category": "standard",
+          "x": -4.675000000000001,
+          "z": 7.6499999999999995,
+          "status": "available"
+        },
+        {
+          "id": "parter-r9-s4",
+          "row": 10,
+          "number": 5,
+          "category": "standard",
+          "x": -4.125,
+          "z": 7.6499999999999995,
+          "status": "available"
+        },
+        {
+          "id": "parter-r9-s5",
+          "row": 10,
+          "number": 6,
+          "category": "standard",
+          "x": -3.575,
+          "z": 7.6499999999999995,
+          "status": "available"
+        },
+        {
+          "id": "parter-r9-s6",
+          "row": 10,
+          "number": 7,
+          "category": "standard",
+          "x": -3.0250000000000004,
+          "z": 7.6499999999999995,
+          "status": "available"
+        },
+        {
+          "id": "parter-r9-s7",
+          "row": 10,
+          "number": 8,
+          "category": "standard",
+          "x": -2.475,
+          "z": 7.6499999999999995,
+          "status": "available"
+        },
+        {
+          "id": "parter-r9-s8",
+          "row": 10,
+          "number": 9,
+          "category": "standard",
+          "x": -1.9250000000000003,
+          "z": 7.6499999999999995,
+          "status": "available"
+        },
+        {
+          "id": "parter-r9-s9",
+          "row": 10,
+          "number": 10,
+          "category": "standard",
+          "x": -1.375,
+          "z": 7.6499999999999995,
+          "status": "available"
+        },
+        {
+          "id": "parter-r9-s10",
+          "row": 10,
+          "number": 11,
+          "category": "standard",
+          "x": -0.8250000000000001,
+          "z": 7.6499999999999995,
+          "status": "available"
+        },
+        {
+          "id": "parter-r9-s13",
+          "row": 10,
+          "number": 14,
+          "category": "standard",
+          "x": 0.8250000000000001,
+          "z": 7.6499999999999995,
+          "status": "available"
+        },
+        {
+          "id": "parter-r9-s14",
+          "row": 10,
+          "number": 15,
+          "category": "standard",
+          "x": 1.375,
+          "z": 7.6499999999999995,
+          "status": "available"
+        },
+        {
+          "id": "parter-r9-s15",
+          "row": 10,
+          "number": 16,
+          "category": "standard",
+          "x": 1.9250000000000003,
+          "z": 7.6499999999999995,
+          "status": "available"
+        },
+        {
+          "id": "parter-r9-s16",
+          "row": 10,
+          "number": 17,
+          "category": "standard",
+          "x": 2.475,
+          "z": 7.6499999999999995,
+          "status": "available"
+        },
+        {
+          "id": "parter-r9-s17",
+          "row": 10,
+          "number": 18,
+          "category": "standard",
+          "x": 3.0250000000000004,
+          "z": 7.6499999999999995,
+          "status": "available"
+        },
+        {
+          "id": "parter-r9-s18",
+          "row": 10,
+          "number": 19,
+          "category": "standard",
+          "x": 3.575,
+          "z": 7.6499999999999995,
+          "status": "available"
+        },
+        {
+          "id": "parter-r9-s19",
+          "row": 10,
+          "number": 20,
+          "category": "standard",
+          "x": 4.125,
+          "z": 7.6499999999999995,
+          "status": "available"
+        },
+        {
+          "id": "parter-r9-s20",
+          "row": 10,
+          "number": 21,
+          "category": "standard",
+          "x": 4.675000000000001,
+          "z": 7.6499999999999995,
+          "status": "available"
+        },
+        {
+          "id": "parter-r9-s21",
+          "row": 10,
+          "number": 22,
+          "category": "standard",
+          "x": 5.2250000000000005,
+          "z": 7.6499999999999995,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r9-s22",
+          "row": 10,
+          "number": 23,
+          "category": "standard",
+          "x": 5.775,
+          "z": 7.6499999999999995,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r9-s23",
+          "row": 10,
+          "number": 24,
+          "category": "standard",
+          "x": 6.325,
+          "z": 7.6499999999999995,
+          "status": "available"
+        },
+        {
+          "id": "parter-r10-s0",
+          "row": 11,
+          "number": 1,
+          "category": "standard",
+          "x": -6.325,
+          "z": 8.5,
+          "status": "available"
+        },
+        {
+          "id": "parter-r10-s1",
+          "row": 11,
+          "number": 2,
+          "category": "standard",
+          "x": -5.775,
+          "z": 8.5,
+          "status": "available"
+        },
+        {
+          "id": "parter-r10-s2",
+          "row": 11,
+          "number": 3,
+          "category": "standard",
+          "x": -5.2250000000000005,
+          "z": 8.5,
+          "status": "available"
+        },
+        {
+          "id": "parter-r10-s3",
+          "row": 11,
+          "number": 4,
+          "category": "standard",
+          "x": -4.675000000000001,
+          "z": 8.5,
+          "status": "available"
+        },
+        {
+          "id": "parter-r10-s4",
+          "row": 11,
+          "number": 5,
+          "category": "standard",
+          "x": -4.125,
+          "z": 8.5,
+          "status": "available"
+        },
+        {
+          "id": "parter-r10-s5",
+          "row": 11,
+          "number": 6,
+          "category": "standard",
+          "x": -3.575,
+          "z": 8.5,
+          "status": "available"
+        },
+        {
+          "id": "parter-r10-s6",
+          "row": 11,
+          "number": 7,
+          "category": "standard",
+          "x": -3.0250000000000004,
+          "z": 8.5,
+          "status": "available"
+        },
+        {
+          "id": "parter-r10-s7",
+          "row": 11,
+          "number": 8,
+          "category": "standard",
+          "x": -2.475,
+          "z": 8.5,
+          "status": "available"
+        },
+        {
+          "id": "parter-r10-s8",
+          "row": 11,
+          "number": 9,
+          "category": "standard",
+          "x": -1.9250000000000003,
+          "z": 8.5,
+          "status": "available"
+        },
+        {
+          "id": "parter-r10-s9",
+          "row": 11,
+          "number": 10,
+          "category": "standard",
+          "x": -1.375,
+          "z": 8.5,
+          "status": "available"
+        },
+        {
+          "id": "parter-r10-s10",
+          "row": 11,
+          "number": 11,
+          "category": "standard",
+          "x": -0.8250000000000001,
+          "z": 8.5,
+          "status": "available"
+        },
+        {
+          "id": "parter-r10-s11",
+          "row": 11,
+          "number": 12,
+          "category": "standard",
+          "x": -0.275,
+          "z": 8.5,
+          "status": "available"
+        },
+        {
+          "id": "parter-r10-s12",
+          "row": 11,
+          "number": 13,
+          "category": "standard",
+          "x": 0.275,
+          "z": 8.5,
+          "status": "available"
+        },
+        {
+          "id": "parter-r10-s13",
+          "row": 11,
+          "number": 14,
+          "category": "standard",
+          "x": 0.8250000000000001,
+          "z": 8.5,
+          "status": "available"
+        },
+        {
+          "id": "parter-r10-s14",
+          "row": 11,
+          "number": 15,
+          "category": "standard",
+          "x": 1.375,
+          "z": 8.5,
+          "status": "available"
+        },
+        {
+          "id": "parter-r10-s15",
+          "row": 11,
+          "number": 16,
+          "category": "standard",
+          "x": 1.9250000000000003,
+          "z": 8.5,
+          "status": "available"
+        },
+        {
+          "id": "parter-r10-s16",
+          "row": 11,
+          "number": 17,
+          "category": "standard",
+          "x": 2.475,
+          "z": 8.5,
+          "status": "available"
+        },
+        {
+          "id": "parter-r10-s17",
+          "row": 11,
+          "number": 18,
+          "category": "standard",
+          "x": 3.0250000000000004,
+          "z": 8.5,
+          "status": "available"
+        },
+        {
+          "id": "parter-r10-s18",
+          "row": 11,
+          "number": 19,
+          "category": "standard",
+          "x": 3.575,
+          "z": 8.5,
+          "status": "available"
+        },
+        {
+          "id": "parter-r10-s19",
+          "row": 11,
+          "number": 20,
+          "category": "standard",
+          "x": 4.125,
+          "z": 8.5,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r10-s20",
+          "row": 11,
+          "number": 21,
+          "category": "standard",
+          "x": 4.675000000000001,
+          "z": 8.5,
+          "status": "available"
+        },
+        {
+          "id": "parter-r10-s21",
+          "row": 11,
+          "number": 22,
+          "category": "standard",
+          "x": 5.2250000000000005,
+          "z": 8.5,
+          "status": "available"
+        },
+        {
+          "id": "parter-r10-s22",
+          "row": 11,
+          "number": 23,
+          "category": "standard",
+          "x": 5.775,
+          "z": 8.5,
+          "status": "available"
+        },
+        {
+          "id": "parter-r10-s23",
+          "row": 11,
+          "number": 24,
+          "category": "standard",
+          "x": 6.325,
+          "z": 8.5,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r11-s0",
+          "row": 12,
+          "number": 1,
+          "category": "standard",
+          "x": -6.325,
+          "z": 9.35,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r11-s1",
+          "row": 12,
+          "number": 2,
+          "category": "standard",
+          "x": -5.775,
+          "z": 9.35,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r11-s2",
+          "row": 12,
+          "number": 3,
+          "category": "standard",
+          "x": -5.2250000000000005,
+          "z": 9.35,
+          "status": "available"
+        },
+        {
+          "id": "parter-r11-s3",
+          "row": 12,
+          "number": 4,
+          "category": "standard",
+          "x": -4.675000000000001,
+          "z": 9.35,
+          "status": "available"
+        },
+        {
+          "id": "parter-r11-s4",
+          "row": 12,
+          "number": 5,
+          "category": "standard",
+          "x": -4.125,
+          "z": 9.35,
+          "status": "available"
+        },
+        {
+          "id": "parter-r11-s5",
+          "row": 12,
+          "number": 6,
+          "category": "standard",
+          "x": -3.575,
+          "z": 9.35,
+          "status": "available"
+        },
+        {
+          "id": "parter-r11-s6",
+          "row": 12,
+          "number": 7,
+          "category": "standard",
+          "x": -3.0250000000000004,
+          "z": 9.35,
+          "status": "available"
+        },
+        {
+          "id": "parter-r11-s7",
+          "row": 12,
+          "number": 8,
+          "category": "standard",
+          "x": -2.475,
+          "z": 9.35,
+          "status": "available"
+        },
+        {
+          "id": "parter-r11-s8",
+          "row": 12,
+          "number": 9,
+          "category": "standard",
+          "x": -1.9250000000000003,
+          "z": 9.35,
+          "status": "available"
+        },
+        {
+          "id": "parter-r11-s9",
+          "row": 12,
+          "number": 10,
+          "category": "standard",
+          "x": -1.375,
+          "z": 9.35,
+          "status": "available"
+        },
+        {
+          "id": "parter-r11-s10",
+          "row": 12,
+          "number": 11,
+          "category": "standard",
+          "x": -0.8250000000000001,
+          "z": 9.35,
+          "status": "available"
+        },
+        {
+          "id": "parter-r11-s11",
+          "row": 12,
+          "number": 12,
+          "category": "standard",
+          "x": -0.275,
+          "z": 9.35,
+          "status": "available"
+        },
+        {
+          "id": "parter-r11-s12",
+          "row": 12,
+          "number": 13,
+          "category": "standard",
+          "x": 0.275,
+          "z": 9.35,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r11-s13",
+          "row": 12,
+          "number": 14,
+          "category": "standard",
+          "x": 0.8250000000000001,
+          "z": 9.35,
+          "status": "sold"
+        },
+        {
+          "id": "parter-r11-s14",
+          "row": 12,
+          "number": 15,
+          "category": "standard",
+          "x": 1.375,
+          "z": 9.35,
+          "status": "available"
+        },
+        {
+          "id": "parter-r11-s15",
+          "row": 12,
+          "number": 16,
+          "category": "standard",
+          "x": 1.9250000000000003,
+          "z": 9.35,
+          "status": "available"
+        },
+        {
+          "id": "parter-r11-s16",
+          "row": 12,
+          "number": 17,
+          "category": "standard",
+          "x": 2.475,
+          "z": 9.35,
+          "status": "available"
+        },
+        {
+          "id": "parter-r11-s17",
+          "row": 12,
+          "number": 18,
+          "category": "standard",
+          "x": 3.0250000000000004,
+          "z": 9.35,
+          "status": "available"
+        },
+        {
+          "id": "parter-r11-s18",
+          "row": 12,
+          "number": 19,
+          "category": "standard",
+          "x": 3.575,
+          "z": 9.35,
+          "status": "available"
+        },
+        {
+          "id": "parter-r11-s19",
+          "row": 12,
+          "number": 20,
+          "category": "standard",
+          "x": 4.125,
+          "z": 9.35,
+          "status": "available"
+        },
+        {
+          "id": "parter-r11-s20",
+          "row": 12,
+          "number": 21,
+          "category": "standard",
+          "x": 4.675000000000001,
+          "z": 9.35,
+          "status": "available"
+        },
+        {
+          "id": "parter-r11-s21",
+          "row": 12,
+          "number": 22,
+          "category": "standard",
+          "x": 5.2250000000000005,
+          "z": 9.35,
+          "status": "available"
+        },
+        {
+          "id": "parter-r11-s22",
+          "row": 12,
+          "number": 23,
+          "category": "standard",
+          "x": 5.775,
+          "z": 9.35,
+          "status": "available"
+        },
+        {
+          "id": "parter-r11-s23",
+          "row": 12,
+          "number": 24,
+          "category": "standard",
+          "x": 6.325,
+          "z": 9.35,
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": "balcony-left",
+      "label": "Балкон левый",
+      "origin": {
+        "x": -10,
+        "y": 2.5,
+        "z": 4
+      },
+      "rotation": 0.25,
+      "seats": [
+        {
+          "id": "balcony-left-r0-s0",
+          "row": 1,
+          "number": 1,
+          "category": "economy",
+          "x": -2.475,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r0-s1",
+          "row": 1,
+          "number": 2,
+          "category": "economy",
+          "x": -1.9250000000000003,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r0-s2",
+          "row": 1,
+          "number": 3,
+          "category": "economy",
+          "x": -1.375,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r0-s3",
+          "row": 1,
+          "number": 4,
+          "category": "economy",
+          "x": -0.8250000000000001,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r0-s4",
+          "row": 1,
+          "number": 5,
+          "category": "economy",
+          "x": -0.275,
+          "z": 0,
+          "status": "sold"
+        },
+        {
+          "id": "balcony-left-r0-s5",
+          "row": 1,
+          "number": 6,
+          "category": "economy",
+          "x": 0.275,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r0-s6",
+          "row": 1,
+          "number": 7,
+          "category": "economy",
+          "x": 0.8250000000000001,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r0-s7",
+          "row": 1,
+          "number": 8,
+          "category": "economy",
+          "x": 1.375,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r0-s8",
+          "row": 1,
+          "number": 9,
+          "category": "economy",
+          "x": 1.9250000000000003,
+          "z": 0,
+          "status": "sold"
+        },
+        {
+          "id": "balcony-left-r0-s9",
+          "row": 1,
+          "number": 10,
+          "category": "economy",
+          "x": 2.475,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r1-s0",
+          "row": 2,
+          "number": 1,
+          "category": "economy",
+          "x": -2.475,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r1-s1",
+          "row": 2,
+          "number": 2,
+          "category": "economy",
+          "x": -1.9250000000000003,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r1-s2",
+          "row": 2,
+          "number": 3,
+          "category": "economy",
+          "x": -1.375,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r1-s3",
+          "row": 2,
+          "number": 4,
+          "category": "economy",
+          "x": -0.8250000000000001,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r1-s4",
+          "row": 2,
+          "number": 5,
+          "category": "economy",
+          "x": -0.275,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r1-s5",
+          "row": 2,
+          "number": 6,
+          "category": "economy",
+          "x": 0.275,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r1-s6",
+          "row": 2,
+          "number": 7,
+          "category": "economy",
+          "x": 0.8250000000000001,
+          "z": 0.85,
+          "status": "sold"
+        },
+        {
+          "id": "balcony-left-r1-s7",
+          "row": 2,
+          "number": 8,
+          "category": "economy",
+          "x": 1.375,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r1-s8",
+          "row": 2,
+          "number": 9,
+          "category": "economy",
+          "x": 1.9250000000000003,
+          "z": 0.85,
+          "status": "sold"
+        },
+        {
+          "id": "balcony-left-r1-s9",
+          "row": 2,
+          "number": 10,
+          "category": "economy",
+          "x": 2.475,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r2-s0",
+          "row": 3,
+          "number": 1,
+          "category": "economy",
+          "x": -2.475,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r2-s1",
+          "row": 3,
+          "number": 2,
+          "category": "economy",
+          "x": -1.9250000000000003,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r2-s2",
+          "row": 3,
+          "number": 3,
+          "category": "economy",
+          "x": -1.375,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r2-s3",
+          "row": 3,
+          "number": 4,
+          "category": "economy",
+          "x": -0.8250000000000001,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r2-s4",
+          "row": 3,
+          "number": 5,
+          "category": "economy",
+          "x": -0.275,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r2-s5",
+          "row": 3,
+          "number": 6,
+          "category": "economy",
+          "x": 0.275,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r2-s6",
+          "row": 3,
+          "number": 7,
+          "category": "economy",
+          "x": 0.8250000000000001,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r2-s7",
+          "row": 3,
+          "number": 8,
+          "category": "economy",
+          "x": 1.375,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r2-s8",
+          "row": 3,
+          "number": 9,
+          "category": "economy",
+          "x": 1.9250000000000003,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r2-s9",
+          "row": 3,
+          "number": 10,
+          "category": "economy",
+          "x": 2.475,
+          "z": 1.7,
+          "status": "sold"
+        },
+        {
+          "id": "balcony-left-r3-s0",
+          "row": 4,
+          "number": 1,
+          "category": "economy",
+          "x": -2.475,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r3-s1",
+          "row": 4,
+          "number": 2,
+          "category": "economy",
+          "x": -1.9250000000000003,
+          "z": 2.55,
+          "status": "sold"
+        },
+        {
+          "id": "balcony-left-r3-s2",
+          "row": 4,
+          "number": 3,
+          "category": "economy",
+          "x": -1.375,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r3-s3",
+          "row": 4,
+          "number": 4,
+          "category": "economy",
+          "x": -0.8250000000000001,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r3-s4",
+          "row": 4,
+          "number": 5,
+          "category": "economy",
+          "x": -0.275,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r3-s5",
+          "row": 4,
+          "number": 6,
+          "category": "economy",
+          "x": 0.275,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r3-s6",
+          "row": 4,
+          "number": 7,
+          "category": "economy",
+          "x": 0.8250000000000001,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r3-s7",
+          "row": 4,
+          "number": 8,
+          "category": "economy",
+          "x": 1.375,
+          "z": 2.55,
+          "status": "sold"
+        },
+        {
+          "id": "balcony-left-r3-s8",
+          "row": 4,
+          "number": 9,
+          "category": "economy",
+          "x": 1.9250000000000003,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r3-s9",
+          "row": 4,
+          "number": 10,
+          "category": "economy",
+          "x": 2.475,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r4-s0",
+          "row": 5,
+          "number": 1,
+          "category": "economy",
+          "x": -2.475,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r4-s1",
+          "row": 5,
+          "number": 2,
+          "category": "economy",
+          "x": -1.9250000000000003,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r4-s2",
+          "row": 5,
+          "number": 3,
+          "category": "economy",
+          "x": -1.375,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r4-s3",
+          "row": 5,
+          "number": 4,
+          "category": "economy",
+          "x": -0.8250000000000001,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r4-s4",
+          "row": 5,
+          "number": 5,
+          "category": "economy",
+          "x": -0.275,
+          "z": 3.4,
+          "status": "sold"
+        },
+        {
+          "id": "balcony-left-r4-s5",
+          "row": 5,
+          "number": 6,
+          "category": "economy",
+          "x": 0.275,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r4-s6",
+          "row": 5,
+          "number": 7,
+          "category": "economy",
+          "x": 0.8250000000000001,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r4-s7",
+          "row": 5,
+          "number": 8,
+          "category": "economy",
+          "x": 1.375,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r4-s8",
+          "row": 5,
+          "number": 9,
+          "category": "economy",
+          "x": 1.9250000000000003,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "balcony-left-r4-s9",
+          "row": 5,
+          "number": 10,
+          "category": "economy",
+          "x": 2.475,
+          "z": 3.4,
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": "balcony-right",
+      "label": "Балкон правый",
+      "origin": {
+        "x": 10,
+        "y": 2.5,
+        "z": 4
+      },
+      "rotation": -0.25,
+      "seats": [
+        {
+          "id": "balcony-right-r0-s0",
+          "row": 1,
+          "number": 1,
+          "category": "economy",
+          "x": -2.475,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r0-s1",
+          "row": 1,
+          "number": 2,
+          "category": "economy",
+          "x": -1.9250000000000003,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r0-s2",
+          "row": 1,
+          "number": 3,
+          "category": "economy",
+          "x": -1.375,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r0-s3",
+          "row": 1,
+          "number": 4,
+          "category": "economy",
+          "x": -0.8250000000000001,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r0-s4",
+          "row": 1,
+          "number": 5,
+          "category": "economy",
+          "x": -0.275,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r0-s5",
+          "row": 1,
+          "number": 6,
+          "category": "economy",
+          "x": 0.275,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r0-s6",
+          "row": 1,
+          "number": 7,
+          "category": "economy",
+          "x": 0.8250000000000001,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r0-s7",
+          "row": 1,
+          "number": 8,
+          "category": "economy",
+          "x": 1.375,
+          "z": 0,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r0-s8",
+          "row": 1,
+          "number": 9,
+          "category": "economy",
+          "x": 1.9250000000000003,
+          "z": 0,
+          "status": "sold"
+        },
+        {
+          "id": "balcony-right-r0-s9",
+          "row": 1,
+          "number": 10,
+          "category": "economy",
+          "x": 2.475,
+          "z": 0,
+          "status": "sold"
+        },
+        {
+          "id": "balcony-right-r1-s0",
+          "row": 2,
+          "number": 1,
+          "category": "economy",
+          "x": -2.475,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r1-s1",
+          "row": 2,
+          "number": 2,
+          "category": "economy",
+          "x": -1.9250000000000003,
+          "z": 0.85,
+          "status": "sold"
+        },
+        {
+          "id": "balcony-right-r1-s2",
+          "row": 2,
+          "number": 3,
+          "category": "economy",
+          "x": -1.375,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r1-s3",
+          "row": 2,
+          "number": 4,
+          "category": "economy",
+          "x": -0.8250000000000001,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r1-s4",
+          "row": 2,
+          "number": 5,
+          "category": "economy",
+          "x": -0.275,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r1-s5",
+          "row": 2,
+          "number": 6,
+          "category": "economy",
+          "x": 0.275,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r1-s6",
+          "row": 2,
+          "number": 7,
+          "category": "economy",
+          "x": 0.8250000000000001,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r1-s7",
+          "row": 2,
+          "number": 8,
+          "category": "economy",
+          "x": 1.375,
+          "z": 0.85,
+          "status": "sold"
+        },
+        {
+          "id": "balcony-right-r1-s8",
+          "row": 2,
+          "number": 9,
+          "category": "economy",
+          "x": 1.9250000000000003,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r1-s9",
+          "row": 2,
+          "number": 10,
+          "category": "economy",
+          "x": 2.475,
+          "z": 0.85,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r2-s0",
+          "row": 3,
+          "number": 1,
+          "category": "economy",
+          "x": -2.475,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r2-s1",
+          "row": 3,
+          "number": 2,
+          "category": "economy",
+          "x": -1.9250000000000003,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r2-s2",
+          "row": 3,
+          "number": 3,
+          "category": "economy",
+          "x": -1.375,
+          "z": 1.7,
+          "status": "sold"
+        },
+        {
+          "id": "balcony-right-r2-s3",
+          "row": 3,
+          "number": 4,
+          "category": "economy",
+          "x": -0.8250000000000001,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r2-s4",
+          "row": 3,
+          "number": 5,
+          "category": "economy",
+          "x": -0.275,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r2-s5",
+          "row": 3,
+          "number": 6,
+          "category": "economy",
+          "x": 0.275,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r2-s6",
+          "row": 3,
+          "number": 7,
+          "category": "economy",
+          "x": 0.8250000000000001,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r2-s7",
+          "row": 3,
+          "number": 8,
+          "category": "economy",
+          "x": 1.375,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r2-s8",
+          "row": 3,
+          "number": 9,
+          "category": "economy",
+          "x": 1.9250000000000003,
+          "z": 1.7,
+          "status": "sold"
+        },
+        {
+          "id": "balcony-right-r2-s9",
+          "row": 3,
+          "number": 10,
+          "category": "economy",
+          "x": 2.475,
+          "z": 1.7,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r3-s0",
+          "row": 4,
+          "number": 1,
+          "category": "economy",
+          "x": -2.475,
+          "z": 2.55,
+          "status": "sold"
+        },
+        {
+          "id": "balcony-right-r3-s1",
+          "row": 4,
+          "number": 2,
+          "category": "economy",
+          "x": -1.9250000000000003,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r3-s2",
+          "row": 4,
+          "number": 3,
+          "category": "economy",
+          "x": -1.375,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r3-s3",
+          "row": 4,
+          "number": 4,
+          "category": "economy",
+          "x": -0.8250000000000001,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r3-s4",
+          "row": 4,
+          "number": 5,
+          "category": "economy",
+          "x": -0.275,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r3-s5",
+          "row": 4,
+          "number": 6,
+          "category": "economy",
+          "x": 0.275,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r3-s6",
+          "row": 4,
+          "number": 7,
+          "category": "economy",
+          "x": 0.8250000000000001,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r3-s7",
+          "row": 4,
+          "number": 8,
+          "category": "economy",
+          "x": 1.375,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r3-s8",
+          "row": 4,
+          "number": 9,
+          "category": "economy",
+          "x": 1.9250000000000003,
+          "z": 2.55,
+          "status": "sold"
+        },
+        {
+          "id": "balcony-right-r3-s9",
+          "row": 4,
+          "number": 10,
+          "category": "economy",
+          "x": 2.475,
+          "z": 2.55,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r4-s0",
+          "row": 5,
+          "number": 1,
+          "category": "economy",
+          "x": -2.475,
+          "z": 3.4,
+          "status": "sold"
+        },
+        {
+          "id": "balcony-right-r4-s1",
+          "row": 5,
+          "number": 2,
+          "category": "economy",
+          "x": -1.9250000000000003,
+          "z": 3.4,
+          "status": "sold"
+        },
+        {
+          "id": "balcony-right-r4-s2",
+          "row": 5,
+          "number": 3,
+          "category": "economy",
+          "x": -1.375,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r4-s3",
+          "row": 5,
+          "number": 4,
+          "category": "economy",
+          "x": -0.8250000000000001,
+          "z": 3.4,
+          "status": "sold"
+        },
+        {
+          "id": "balcony-right-r4-s4",
+          "row": 5,
+          "number": 5,
+          "category": "economy",
+          "x": -0.275,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r4-s5",
+          "row": 5,
+          "number": 6,
+          "category": "economy",
+          "x": 0.275,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r4-s6",
+          "row": 5,
+          "number": 7,
+          "category": "economy",
+          "x": 0.8250000000000001,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r4-s7",
+          "row": 5,
+          "number": 8,
+          "category": "economy",
+          "x": 1.375,
+          "z": 3.4,
+          "status": "available"
+        },
+        {
+          "id": "balcony-right-r4-s8",
+          "row": 5,
+          "number": 9,
+          "category": "economy",
+          "x": 1.9250000000000003,
+          "z": 3.4,
+          "status": "sold"
+        },
+        {
+          "id": "balcony-right-r4-s9",
+          "row": 5,
+          "number": 10,
+          "category": "economy",
+          "x": 2.475,
+          "z": 3.4,
+          "status": "available"
+        }
+      ]
+    }
+  ],
+  "modelCalibration": {
+    "scale": 1,
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "rotY": 0
+  }
+}
