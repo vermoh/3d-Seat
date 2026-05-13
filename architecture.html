@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Seat Selector — архитектура интеграции</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #ffffff;
+  --bg-alt: #f5f5f5;
+  --bg-code: #1a1a1a;
+  --text: #1a1a1a;
+  --text-muted: #6a6a6a;
+  --rule: #e0e0e0;
+  --warn: #b54a2c;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 56px 32px 96px;
+}
+
+header.hero {
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.doc-id {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  max-width: 560px;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 24px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.meta span strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.toc {
+  background: var(--bg-alt);
+  padding: 20px 24px;
+  margin-bottom: 56px;
+  border: 1px solid var(--rule);
+}
+
+.toc-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.toc ol { list-style: none; counter-reset: toc; }
+
+.toc li {
+  counter-increment: toc;
+  padding: 4px 0;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.toc li::before {
+  content: counter(toc, decimal-leading-zero);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+  min-width: 24px;
+}
+
+.toc a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.toc a:hover { border-color: var(--text); }
+
+section { margin-bottom: 56px; scroll-margin-top: 24px; }
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--rule);
+}
+
+h2 .num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-right: 12px;
+}
+
+h3 { font-size: 16px; font-weight: 600; margin: 28px 0 12px; }
+
+h4 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin: 20px 0 10px;
+}
+
+p { margin-bottom: 14px; }
+p strong { font-weight: 600; }
+
+ul, ol { margin: 0 0 16px 0; padding-left: 22px; }
+li { margin-bottom: 6px; }
+
+pre {
+  background: var(--bg-code);
+  color: #e8e8e8;
+  padding: 16px 20px;
+  overflow-x: auto;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 16px 0;
+  border-radius: 2px;
+}
+
+pre .c { color: #7a7a7a; }
+pre .k { color: #9cb4d6; }
+pre .s { color: #a8c89a; }
+pre .n { color: #d4a585; }
+
+code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.88em;
+  background: var(--bg-alt);
+  padding: 1px 5px;
+  border-radius: 2px;
+}
+
+.note {
+  background: var(--bg-alt);
+  border-left: 2px solid var(--text);
+  padding: 14px 18px;
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.note-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.note p:last-child { margin-bottom: 0; }
+.note.warn { border-left-color: var(--warn); }
+.note.warn .note-label { color: var(--warn); }
+
+.diagram {
+  background: var(--bg-alt);
+  padding: 20px 24px;
+  margin: 20px 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  line-height: 1.6;
+  white-space: pre;
+  overflow-x: auto;
+  border: 1px solid var(--rule);
+}
+
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 13px; }
+
+th, td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+
+th {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  border-bottom: 1px solid var(--text);
+}
+
+tr td:first-child { font-weight: 500; }
+
+footer {
+  margin-top: 80px;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 640px) {
+  .container { padding: 40px 20px 64px; }
+  h1 { font-size: 24px; }
+  h2 { font-size: 18px; }
+  pre { padding: 14px; font-size: 11px; }
+  .diagram { padding: 14px; font-size: 10px; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header class="hero">
+  <h1>3D Seat Selector. Архитектура интеграции в билетный сервис</h1>
+  <p class="subtitle">Описание модуля выбора мест с 2D/3D-визуализацией. Состав слоёв, формат данных, точки интеграции, объём работ, риски.</p>
+  <div class="meta">
+    <span><strong>Аудитория:</strong> tech lead, CTO</span>
+    <span><strong>Тип:</strong> архитектурный обзор</span>
+    <span><strong>Приложение:</strong> прототип seat-selector.jsx</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="toc-title">Содержание</div>
+  <ol>
+    <li><a href="#context">Контекст</a></li>
+    <li><a href="#anatomy">Слои системы</a></li>
+    <li><a href="#data">Модель зала</a></li>
+    <li><a href="#render">Рендер: 2D, 3D, 360°</a></li>
+    <li><a href="#models">Загрузка моделей зала</a></li>
+    <li><a href="#realtime">Realtime: блокировка мест</a></li>
+    <li><a href="#integration">Точки интеграции</a></li>
+    <li><a href="#scope">Объём работ и этапы</a></li>
+    <li><a href="#risks">Риски</a></li>
+    <li><a href="#stack">Технологический стек</a></li>
+  </ol>
+</nav>
+
+<section id="context">
+<h2><span class="num">01</span>Контекст</h2>
+
+<p>iTicket использует WebGL для 3D-визуализации залов. Пользователь видит зал в перспективе, вращает камеру, увеличивает сектора, кликом выбирает место. Параллельно работает 2D-режим — быстрее и точнее для опытных пользователей.</p>
+
+<p>Аналогичные решения на рынке: 3D Digital Venue, Seats3D (Ballena), Virtual Venue от Ticketmaster. Принцип одинаковый: 3D-художник строит модель зала, движок рендерит её в браузере, бэкенд отдаёт инвентарь мест.</p>
+
+<p>Задача — встроить подобный модуль в существующий билетный сервис. Это не «нарисовать 3D», а спроектировать систему, которая:</p>
+
+<ul>
+  <li>получает структуру зала и состояние мест из бэкенда;</li>
+  <li>рендерит её в двух режимах с переключением;</li>
+  <li>обрабатывает выбор, временную блокировку и продажу;</li>
+  <li>деградирует на слабых устройствах;</li>
+  <li>не ломает существующий чекаут — заменяет один шаг.</li>
+</ul>
+
+<div class="note">
+<div class="note-label">Главный тезис</div>
+<p>70% стоимости системы — не в 3D-движке, а в данных и интеграции. Сам рендер пишется за несколько недель. Основной объём работ — создание моделей залов, инвентарь, блокировки, синхронизация с CRM, поддержка нескольких площадок.</p>
+</div>
+</section>
+
+<section id="anatomy">
+<h2><span class="num">02</span>Слои системы</h2>
+
+<p>Система раскладывается на 7 слоёв. Каждый — отдельный фронт работ.</p>
+
+<div class="diagram">┌───────────────────────────────────────────────────────────┐
+│  7. Venue editor                                          │
+│     инструмент 3D-художника для создания моделей залов    │
+├───────────────────────────────────────────────────────────┤
+│  6. Asset pipeline                                        │
+│     хранение и доставка 3D-моделей и текстур              │
+├───────────────────────────────────────────────────────────┤
+│  5. Inventory API                                         │
+│     места, цены, статусы, holds                           │
+├───────────────────────────────────────────────────────────┤
+│  4. Realtime layer                                        │
+│     WebSocket: блокировки, освобождения                   │
+├───────────────────────────────────────────────────────────┤
+│  3. Render engine                                         │
+│     2D SVG, 3D WebGL, опционально 360° seat view          │
+├───────────────────────────────────────────────────────────┤
+│  2. Selection state                                       │
+│     выбор, валидация, корзина                             │
+├───────────────────────────────────────────────────────────┤
+│  1. Checkout integration                                  │
+│     передача выбора в процесс оплаты                      │
+└───────────────────────────────────────────────────────────┘</div>
+
+<p>Прототип покрывает слои 2 и 3. Остальные слои — интеграционная часть. От её объёма зависит, написать модуль с нуля или взять готовое решение.</p>
+</section>
+
+<section id="data">
+<h2><span class="num">03</span>Модель зала</h2>
+
+<p>Фундамент системы. Ошибка в модели заставит переделывать весь стек. Базовая иерархия:</p>
+
+<pre><span class="c">// venue.json</span>
+{
+  <span class="k">"id"</span>: <span class="s">"hall-001"</span>,
+  <span class="k">"name"</span>: <span class="s">"Концертный зал"</span>,
+  <span class="k">"stage"</span>: { <span class="k">"x"</span>: <span class="n">0</span>, <span class="k">"y"</span>: <span class="n">0</span>, <span class="k">"z"</span>: <span class="n">-2</span>, <span class="k">"width"</span>: <span class="n">14</span> },
+  <span class="k">"sections"</span>: [
+    {
+      <span class="k">"id"</span>: <span class="s">"parter"</span>,
+      <span class="k">"label"</span>: <span class="s">"Партер"</span>,
+      <span class="k">"origin"</span>: { <span class="k">"x"</span>: <span class="n">0</span>, <span class="k">"y"</span>: <span class="n">0</span>, <span class="k">"z"</span>: <span class="n">2</span> },
+      <span class="k">"rotation"</span>: <span class="n">0</span>,
+      <span class="k">"rows"</span>: [
+        {
+          <span class="k">"index"</span>: <span class="n">1</span>,
+          <span class="k">"seats"</span>: [
+            { <span class="k">"id"</span>: <span class="s">"P-1-1"</span>, <span class="k">"num"</span>: <span class="n">1</span>, <span class="k">"category"</span>: <span class="s">"vip"</span>, <span class="k">"x"</span>: <span class="n">-6.6</span>, <span class="k">"z"</span>: <span class="n">0</span> }
+          ]
+        }
+      ]
+    }
+  ],
+  <span class="k">"categories"</span>: [
+    { <span class="k">"id"</span>: <span class="s">"vip"</span>, <span class="k">"price"</span>: <span class="n">250</span>, <span class="k">"color"</span>: <span class="s">"#c9a961"</span> }
+  ]
+}</pre>
+
+<h3>Ключевые решения</h3>
+
+<p><strong>Координаты: реальные или абстрактные.</strong> Реальные метры дают точные расстояния и работают в 3D. Абстрактные сетки проще, но плохо переносятся в перспективу. Если нужен 360°-вид с конкретного места — только метры.</p>
+
+<p><strong>Места: объекты или маска.</strong> Для залов до 3000 мест каждое место — отдельный объект. Для стадионов 50 000+ мест сектора хранят как растровые маски с lookup-таблицей.</p>
+
+<p><strong>Версионирование залов.</strong> Зал меняется: убрали ряд, добавили VIP-ложу. Билеты, проданные до изменения, должны указывать на старую версию схемы. Решение — поле <code>venue_version</code> и неизменяемые snapshot'ы.</p>
+
+<div class="note warn">
+<div class="note-label">Типовая ошибка</div>
+<p>Смешивают модель зала (геометрия) и инвентарь (что в продаже). Это разные сущности с разным жизненным циклом. Зал стабилен, инвентарь меняется с каждым событием. Бэкенд отдаёт их отдельно, клиент склеивает.</p>
+</div>
+</section>
+
+<section id="render">
+<h2><span class="num">04</span>Рендер: 2D, 3D, 360°</h2>
+
+<p>В индустрии устоялись три уровня визуализации. Зрелый продукт поддерживает все три.</p>
+
+<table>
+  <thead>
+    <tr><th>Уровень</th><th>Технология</th><th>Назначение</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>2D-схема</td><td>SVG или canvas</td><td>Основной инструмент выбора. Быстро, точно, работает на mobile. 95% покупок происходит здесь.</td></tr>
+    <tr><td>3D-перспектива</td><td>WebGL (Three.js, Babylon.js)</td><td>Помогает оценить расположение секторов относительно сцены. Даёт прирост конверсии за счёт уверенности.</td></tr>
+    <tr><td>360°-вид с места</td><td>Pannellum, Marzipano</td><td>Панорама с конкретной точки зала. Снимается фотографом или рендерится из 3D-сцены.</td></tr>
+  </tbody>
+</table>
+
+<h3>Технические требования к 3D</h3>
+
+<p><strong>Instanced rendering.</strong> Зал на 3000 мест — это 3000 одинаковых кресел. Отдельный draw call на каждое положит мобилку. Решение — <code>THREE.InstancedMesh</code>: одна геометрия, один материал, тысячи трансформаций в одном вызове GPU.</p>
+
+<p><strong>LOD (Level of Detail).</strong> На дальнем зуме кресло — куб. На ближнем — кресло с подлокотниками. Минимум два уровня, переключаются по расстоянию до камеры.</p>
+
+<p><strong>Raycasting для кликов.</strong> Клик в 3D — луч из камеры в сцену. Three.js даёт <code>Raycaster</code>. С instanced mesh используется <code>intersectObject</code>, из пересечения берётся <code>instanceId</code>.</p>
+
+<p><strong>Touch controls.</strong> OrbitControls работает на mobile плохо. Пишут свои жесты: один палец — вращение, два — pinch zoom, тап без движения — выбор. Порог «без движения» — 4–6 пикселей.</p>
+
+<p><strong>Performance budget.</strong> Бюджетный Android — 30 FPS. iPhone — 60. При просадке FPS — fallback на 2D с уведомлением.</p>
+
+<h3>Деградация</h3>
+
+<p>3D — не единственный режим. На старых устройствах WebGL не запустится или будет работать медленно. <strong>2D — базовый режим, 3D — улучшение.</strong> Не наоборот.</p>
+</section>
+
+<section id="models">
+<h2><span class="num">05</span>Загрузка моделей зала</h2>
+
+<p>Геометрия зала — статичная 3D-сцена: стены, потолок, сцена, декор, балконы. Её рендерят один раз при открытии страницы. Места не являются частью этой модели — они описываются в <code>venue.json</code> и инстансятся программно через <code>InstancedMesh</code>. Если рисовать каждое место отдельной 3D-моделью, производительность падает кратно.</p>
+
+<p>На практике загружают модель окружения, а места строят из координат поверх.</p>
+
+<h3>Форматы 3D-моделей для веба</h3>
+
+<table>
+  <thead>
+    <tr><th>Формат</th><th>Содержание</th><th>Назначение</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>GLTF / GLB</td><td>Промышленный стандарт. Геометрия, текстуры, PBR-материалы, анимации в одном файле. GLB — бинарный, GLTF — JSON + ассеты.</td><td>Дефолтный выбор для продакшена. Малый размер, быстрая загрузка.</td></tr>
+    <tr><td>OBJ + MTL</td><td>Простой текстовый формат с материалами. Без анимаций и PBR.</td><td>Прототипы, импорт из старого софта. В продакшен не идёт.</td></tr>
+    <tr><td>FBX</td><td>Проприетарный формат Autodesk. Большой, медленный лоадер.</td><td>Только если пайплайн жёстко привязан к 3ds Max или Maya.</td></tr>
+    <tr><td>USDZ</td><td>Apple-формат для AR.</td><td>AR-preview зала на iOS. Не для основной сцены.</td></tr>
+    <tr><td>Three.js JSON</td><td>Внутренний формат Three.js.</td><td>Редко — только при экспорте напрямую из редактора Three.</td></tr>
+  </tbody>
+</table>
+
+<p>В 95% случаев — <strong>GLB</strong>. Один бинарный файл, один HTTP-запрос, сжатие через Draco или Meshopt, поддержка PBR.</p>
+
+<h3>Источники моделей</h3>
+
+<h4>1 · Художник в Blender / 3ds Max / Maya</h4>
+<p>Основной путь. Художник получает план зала (PDF, чертёж, фото) → строит модель → экспортирует в GLB → инженер подгружает. Цикл — 3–7 дней на зал среднего размера.</p>
+
+<h4>2 · Готовые модели</h4>
+<p>Sketchfab, Poly Haven, CGTrader. Подходит для прототипа или для unbranded залов. Обязательная проверка лицензии: CC0, royalty-free или commercial.</p>
+
+<h4>3 · Photogrammetry или LIDAR-сканирование</h4>
+<p>Реальный зал снимается, на выходе — 3D-меш. Точно, но файл тяжёлый, требует чистки. Оправдано для уникальных площадок: исторические театры, концертные залы с архитектурной ценностью.</p>
+
+<h4>4 · Программная генерация</h4>
+<p>Зал не моделируется художником, а строится из параметров: количество рядов, кривизна, наклон, размер сцены. Подходит для типовых залов и сетей с большим числом одинаковых площадок (кинотеатры, корпоративные ивенты). Так работает прототип в текущем артефакте.</p>
+
+<h3>Подключение GLTFLoader</h3>
+
+<p>Three.js не загружает 3D-файлы из коробки. Нужен отдельный лоадер из <code>three/examples/jsm/loaders</code>.</p>
+
+<pre><span class="c">// 1. Импорт</span>
+import { GLTFLoader } from <span class="s">'three/examples/jsm/loaders/GLTFLoader.js'</span>;
+
+<span class="c">// 2. В useEffect после создания scene:</span>
+const loader = new GLTFLoader();
+loader.load(
+  <span class="s">'/assets/venues/hall-001.glb'</span>,
+  (gltf) => {
+    <span class="c">// gltf.scene — THREE.Group со всей геометрией зала</span>
+    gltf.scene.position.set(<span class="n">0</span>, <span class="n">0</span>, <span class="n">0</span>);
+    gltf.scene.scale.set(<span class="n">1</span>, <span class="n">1</span>, <span class="n">1</span>);
+    scene.add(gltf.scene);
+  },
+  (xhr) => console.log(`${(xhr.loaded / xhr.total) * <span class="n">100</span>}% loaded`),
+  (error) => console.error(<span class="s">'GLTF load error:'</span>, error)
+);</pre>
+
+<p>После загрузки модель встаёт фоном, места из <code>venue.json</code> рисуются поверх через <code>InstancedMesh</code>. Координаты в <code>venue.json</code> (в метрах) должны соответствовать масштабу модели — это согласовывается на этапе экспорта из Blender.</p>
+
+<h3>Draco-компрессия</h3>
+
+<p>GLB можно сжать через Draco — сторонний кодек геометрии. Размер модели падает в 5–10 раз. Декодирование идёт через WebAssembly на клиенте.</p>
+
+<pre>import { DRACOLoader } from <span class="s">'three/examples/jsm/loaders/DRACOLoader.js'</span>;
+
+const dracoLoader = new DRACOLoader();
+dracoLoader.setDecoderPath(<span class="s">'https://www.gstatic.com/draco/v1/decoders/'</span>);
+loader.setDRACOLoader(dracoLoader);
+
+<span class="c">// дальше тот же loader.load()</span></pre>
+
+<p>Для модели зала на 5–15 МБ полигонов — обязательная мера. WASM-декодер берётся с Google CDN или хостится самостоятельно.</p>
+
+<h3>Схема данных с моделью</h3>
+
+<p>В <code>venue.json</code> добавляется поле <code>modelUrl</code> с путём к GLB. Клиент сначала параллельно загружает venue и модель, затем рендерит сцену.</p>
+
+<pre>{
+  <span class="k">"id"</span>: <span class="s">"hall-001"</span>,
+  <span class="k">"name"</span>: <span class="s">"Концертный зал"</span>,
+  <span class="k">"modelUrl"</span>: <span class="s">"/assets/venues/hall-001.glb"</span>,
+  <span class="k">"modelScale"</span>: <span class="n">1.0</span>,
+  <span class="k">"modelOffset"</span>: { <span class="k">"x"</span>: <span class="n">0</span>, <span class="k">"y"</span>: <span class="n">0</span>, <span class="k">"z"</span>: <span class="n">0</span> },
+  <span class="k">"stage"</span>: { ... },
+  <span class="k">"sections"</span>: [ ... ]
+}</pre>
+
+<h3>LOD: несколько уровней детализации</h3>
+
+<p>На продакшене готовят 2–3 версии модели:</p>
+
+<ul>
+  <li><strong>low</strong> — упрощённая геометрия, без декора. 1–2 МБ. Для мобильных и слабых устройств.</li>
+  <li><strong>medium</strong> — основная модель. 3–8 МБ. Дефолт для большинства десктопов.</li>
+  <li><strong>high</strong> — детализированная, с текстурами высокого разрешения. 10–20 МБ. Опция для мощных машин.</li>
+</ul>
+
+<p>Уровень выбирается по результатам benchmark на клиенте: измеряется FPS на тестовой сцене, дальше грузится подходящий LOD. Three.js даёт встроенный класс <code>THREE.LOD</code> для динамического переключения по расстоянию до камеры.</p>
+
+<h3>Asset pipeline в продакшене</h3>
+
+<p>На системе с десятками залов хранение моделей превращается в отдельную задачу.</p>
+
+<div class="diagram">┌─────────────────────────────────────────────────────────┐
+│  Художник (Blender) → экспорт GLB → загрузка в CMS      │
+└──────────────────────┬──────────────────────────────────┘
+                       │
+                       ▼
+┌─────────────────────────────────────────────────────────┐
+│  Asset processing pipeline                              │
+│  • Draco-компрессия                                     │
+│  • Генерация LOD (low/medium/high)                      │
+│  • Валидация: размер, полигоны, текстуры                │
+└──────────────────────┬──────────────────────────────────┘
+                       │
+                       ▼
+┌─────────────────────────────────────────────────────────┐
+│  S3 / CDN                                               │
+│  /venues/hall-001/v3/low.glb                            │
+│  /venues/hall-001/v3/medium.glb                         │
+│  /venues/hall-001/v3/high.glb                           │
+└──────────────────────┬──────────────────────────────────┘
+                       │
+                       ▼
+┌─────────────────────────────────────────────────────────┐
+│  Клиент: GLTFLoader → DRACOLoader → render              │
+└─────────────────────────────────────────────────────────┘</div>
+
+<div class="note warn">
+<div class="note-label">Версионирование</div>
+<p>Модель зала меняется со временем. Билеты, проданные до изменения, должны рендериться с той версией, что была актуальна на момент продажи. Хранить как неизменяемые snapshot'ы: <code>/venues/hall-001/v3/...</code>, <code>/venues/hall-001/v4/...</code>. Поле <code>venue_version</code> в <code>venue.json</code> ссылается на конкретную версию.</p>
+</div>
+
+<h3>Минимум для прототипа</h3>
+
+<p>В текущий артефакт <code>seat-selector.jsx</code> модель добавляется в 4 шага:</p>
+
+<ol>
+  <li>Импортировать <code>GLTFLoader</code>.</li>
+  <li>В <code>useEffect</code> компонента <code>SeatMap3D</code> вызвать <code>loader.load(modelUrl, ...)</code>.</li>
+  <li>В коллбэке добавить <code>gltf.scene</code> в <code>scene</code>.</li>
+  <li>Удалить программные примитивы (<code>floor</code>, <code>stage</code>) — они станут частью загруженной модели.</li>
+</ol>
+
+<p>Fallback на программную геометрию имеет смысл оставить: при ошибке загрузки или отсутствии <code>modelUrl</code> в данных зала прототип работает как сейчас.</p>
+
+<div class="note warn">
+<div class="note-label">Ограничение среды артефактов</div>
+<p>В песочнице, где запущен прилагаемый прототип, динамическая загрузка subpath-модулей Three.js (<code>three/examples/jsm/loaders/...</code>) заблокирована. Поэтому в артефакте используется только программная геометрия зала. В обычной React-среде (Vite, Next.js, CRA) загрузка GLB через GLTFLoader работает стандартно, без обходных решений.</p>
+</div>
+</section>
+
+<section id="realtime">
+<h2><span class="num">06</span>Realtime: блокировка мест</h2>
+
+<p>Слабое место большинства самописных решений. Сценарий двойной продажи:</p>
+
+<ol>
+  <li>Пользователь A открывает зал. Место 5-12 свободно.</li>
+  <li>Пользователь B открывает тот же зал одновременно.</li>
+  <li>A кликает 5-12. Место уходит в <code>hold</code> на 10 минут.</li>
+  <li>B должен мгновенно увидеть, что место занято.</li>
+  <li>A не оплатил за 10 минут. Место возвращается в продажу, B видит обновление.</li>
+</ol>
+
+<p>Без realtime получается двойная продажа.</p>
+
+<h3>Hold-механизм</h3>
+
+<pre><span class="c">// Состояния</span>
+available  <span class="c">// свободно</span>
+held       <span class="c">// в корзине у кого-то, TTL ~10 мин</span>
+reserved   <span class="c">// оплата в процессе</span>
+sold       <span class="c">// продано</span>
+
+<span class="c">// API</span>
+POST   /events/{id}/holds        { seat_ids: [...] }  → hold_token + expires_at
+DELETE /holds/{hold_token}                            → освободить
+POST   /holds/{hold_token}/confirm                    → перевести в reserved</pre>
+
+<h3>Транспорт обновлений</h3>
+
+<table>
+  <thead>
+    <tr><th>Подход</th><th>Плюсы</th><th>Минусы</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Polling N сек</td><td>Просто, работает везде</td><td>Лаг 2–5 сек, лишняя нагрузка</td></tr>
+    <tr><td>Server-Sent Events</td><td>Однонаправленный поток, проще WS</td><td>Только server → client</td></tr>
+    <tr><td>WebSocket</td><td>Двунаправленный, мгновенный</td><td>Сложнее инфраструктура, держать соединения</td></tr>
+  </tbody>
+</table>
+
+<p>На MVP — polling 3–5 секунд для открытого зала. На зрелую версию — WebSocket с подпиской на event.</p>
+
+<div class="note">
+<div class="note-label">Тонкость</div>
+<p>Не слать каждое изменение всем подключённым. Слать дельту по событию: «эти места изменили статус». На клиенте — patch текущего состояния, не полная перезагрузка. Иначе на ажиотажном событии бэкенд ляжет.</p>
+</div>
+</section>
+
+<section id="integration">
+<h2><span class="num">07</span>Точки интеграции</h2>
+
+<p>Глубина интеграции определяется тремя вариантами.</p>
+
+<h3>A. Drop-in widget</h3>
+
+<p>Модуль — чёрный ящик. Бэкенд хоста отдаёт <code>venue.json</code> и <code>inventory.json</code> по согласованному формату. Виджет показывает зал и возвращает <code>seat_ids</code>. Корзину, оплату, билеты делает существующий сервис.</p>
+
+<p>Путь по умолчанию. Минимум переделок, максимум переиспользования.</p>
+
+<pre><span class="c">// Минимальный API между виджетом и хостом</span>
+&lt;SeatSelector
+  venueUrl=<span class="s">"/api/venues/123/v2"</span>
+  inventoryUrl=<span class="s">"/api/events/456/inventory"</span>
+  holdsApi=<span class="s">"/api/events/456/holds"</span>
+  onSelectionChange={(seats) => {...}}
+  onCheckout={(holdToken) => router.push(<span class="s">'/checkout'</span>)}
+/&gt;</pre>
+
+<h3>B. Tight integration</h3>
+
+<p>Виджет использует внутренние сервисы хоста: его аутентификацию, очередь, CRM. Подходит, если бэкенд хоста развит и не нужно дублировать holds на стороне виджета.</p>
+
+<p>Сложнее. Даёт цельный UX — пользователь не «выпадает» в отдельный модуль.</p>
+
+<h3>C. Полная замена шага выбора</h3>
+
+<p>Виджет заменяет экран выбора целиком — со своей корзиной и своими holds. Существующий сервис подключается только на чекауте и приёме платежа.</p>
+
+<p>Имеет смысл, если существующий выбор устарел и переписать всё проще, чем интегрировать.</p>
+
+<h3>Требования к хосту (минимум)</h3>
+
+<ul>
+  <li>Эндпоинт инвентаря: статусы мест для события.</li>
+  <li>Эндпоинт holds: создание, отмена, подтверждение блокировки.</li>
+  <li>Цены и категории: матрица event × category → price. С учётом промокодов и динамического ценообразования.</li>
+  <li>Авторизация: гость или залогиненный, лимиты на покупку.</li>
+</ul>
+</section>
+
+<section id="scope">
+<h2><span class="num">08</span>Объём работ и этапы</h2>
+
+<p>Декомпозиция для проекта с нуля. Цифры — относительные, в человеко-неделях для команды из 1 frontend, 1 backend, 1 3D-художника.</p>
+
+<table>
+  <thead>
+    <tr><th>Этап</th><th>Содержание</th><th>Срок</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>0 · Discovery</td><td>Аудит бэкенда хоста, формат venue, согласование API</td><td>2 нед.</td></tr>
+    <tr><td>1 · 2D MVP</td><td>SVG-схема, выбор, корзина, hold через REST, один зал</td><td>4 нед.</td></tr>
+    <tr><td>2 · Realtime</td><td>WebSocket-обновления, защита от двойной продажи, очередь на ажиотаж</td><td>3 нед.</td></tr>
+    <tr><td>3 · 3D-режим</td><td>Three.js, instanced rendering, touch controls, переключатель, fallback</td><td>4 нед.</td></tr>
+    <tr><td>4 · Venue editor</td><td>Инструмент художника: импорт CAD, расстановка мест, экспорт venue.json</td><td>6 нед.</td></tr>
+    <tr><td>5 · 360° seat view</td><td>Панорамы с разных мест: рендер из 3D-сцены или съёмка</td><td>3 нед.</td></tr>
+    <tr><td>6 · Production hardening</td><td>Нагрузочные тесты, мониторинг, A/B-тесты конверсии, документация</td><td>3 нед.</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Итого:</strong> 25 недель до production-quality. MVP с 2D и базовым 3D — 11 недель.</p>
+
+<div class="note">
+<div class="note-label">Альтернатива</div>
+<p>Если задача коммерческая, сравните стоимость с лицензией 3D Digital Venue или аналогов. Готовые решения интегрируются за 4–6 недель. Свой стек выгоден при большом потоке событий, необходимости брендированного UX или стратегической цели владеть технологией.</p>
+</div>
+</section>
+
+<section id="risks">
+<h2><span class="num">09</span>Риски</h2>
+
+<h4>1 · Создание моделей залов</h4>
+<p>Самая недооценённая часть. Один зал на 1500 мест — 3–7 дней работы 3D-художника. 50 площадок — полгода чистой работы. Без хорошего venue editor процесс не масштабируется.</p>
+
+<h4>2 · Расхождение модели и реальности</h4>
+<p>Художник нарисовал зал «как должно быть». На площадке убрали два ряда, перенесли пульт, переставили колонны. Билет продан на место, которого нет. Нужен процесс верификации перед публикацией.</p>
+
+<h4>3 · Производительность на старых устройствах</h4>
+<p>WebGL на устройствах старше 5 лет работает плохо. На массовой аудитории нужна автоматическая деградация: низкий FPS — переключение на 2D, 3D в сессии больше не предлагается.</p>
+
+<h4>4 · SEO</h4>
+<p>3D-canvas не индексируется. Если страница должна попадать в выдачу, нужен SSR-fallback с 2D-схемой и meta-разметкой.</p>
+
+<h4>5 · Лицензии на 3D-ассеты</h4>
+<p>Текстуры дерева, кресел, освещения требуют проверки лицензии. Бесплатные ассеты — только CC0 или royalty-free. Иначе через год придёт письмо.</p>
+
+<h4>6 · Доступность (a11y)</h4>
+<p>3D-карта недоступна для screen reader. В ЕС и UK есть законодательство, требующее доступности. Решение: 2D-режим полностью клавиатурно-навигабельный с aria-labels на местах.</p>
+</section>
+
+<section id="stack">
+<h2><span class="num">10</span>Технологический стек</h2>
+
+<table>
+  <thead>
+    <tr><th>Слой</th><th>Технология</th><th>Альтернатива</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>2D рендер</td><td>SVG (через React)</td><td>Canvas 2D для больших залов</td></tr>
+    <tr><td>3D рендер</td><td>Three.js + react-three-fiber</td><td>Babylon.js</td></tr>
+    <tr><td>Загрузка моделей</td><td>GLTFLoader + DRACOLoader (Three.js)</td><td>—</td></tr>
+    <tr><td>Формат моделей</td><td>GLB с Draco-компрессией</td><td>OBJ для прототипов</td></tr>
+    <tr><td>State</td><td>Zustand</td><td>Redux Toolkit, jotai</td></tr>
+    <tr><td>Realtime</td><td>Socket.IO или нативный WS + Redis pub/sub</td><td>Pusher, Ably (managed)</td></tr>
+    <tr><td>Holds storage</td><td>Redis с TTL</td><td>Postgres + cron job</td></tr>
+    <tr><td>Venue assets</td><td>S3 / CDN, JSON + GLTF</td><td>—</td></tr>
+    <tr><td>Venue editor</td><td>Кастомный web-инструмент на R3F</td><td>Blender + плагин экспорта</td></tr>
+    <tr><td>360° viewer</td><td>Pannellum, Marzipano</td><td>Three.js sphere</td></tr>
+  </tbody>
+</table>
+
+<h3>Минимальный стек для MVP</h3>
+
+<p>React, Three.js, SVG, REST polling, Redis для holds. WebSocket, GLTF-ассеты, venue editor и 360° — второй виток.</p>
+
+<div class="note">
+<div class="note-label">Прототип</div>
+<p>В файле <code>seat-selector.jsx</code> реализованы слои 2 (Selection state) и 3 (Render engine): 2D SVG, 3D WebGL с переключением, выбор, корзина, ценовые категории, hover-состояния, instanced rendering, custom touch controls. Это не production-код, а демонстрация архитектурных решений. Бэкенд, realtime, holds и venue editor — за пределами прототипа.</p>
+</div>
+</section>
+
+</div>
+
+</body>
+</html>
